@@ -48,7 +48,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
-              className="bg-white border border-gray-100 shadow-sm p-3 rounded-2xl flex flex-col group hover:border-gray-200 transition-all duration-500"
+              className="bg-white border border-gray-100 shadow-md p-3 rounded-2xl flex flex-col group hover:border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-full h-40 rounded-xl overflow-hidden mb-4 relative">
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>

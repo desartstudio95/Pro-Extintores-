@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Products() {
@@ -33,6 +33,14 @@ export default function Products() {
       }
     };
   }, [isHovered]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { current } = scrollRef;
+      const scrollAmount = direction === 'left' ? -300 : 300;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const products = [
     {
@@ -72,7 +80,7 @@ export default function Products() {
   return (
     <section id="products" className="relative z-10 scroll-mt-24 pt-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-4">
           <div>
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
               <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
@@ -81,7 +89,23 @@ export default function Products() {
               Nossos <span className="text-gray-500">Produtos</span>
             </h3>
           </div>
+          <div className="flex items-center gap-3">
+            <button 
+              onClick={() => scroll('left')}
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={() => scroll('right')}
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
+
+        <div className="w-full h-[2px] bg-pro-red mb-8"></div>
 
         <div 
           className="relative w-full pb-4"
@@ -95,7 +119,7 @@ export default function Products() {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[140px] md:w-[170px] shrink-0 snap-start"
+                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[140px] md:w-[170px] shrink-0 snap-start"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
                 <img 

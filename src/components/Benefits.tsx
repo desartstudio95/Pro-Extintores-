@@ -1,29 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, Wrench, ShieldCheck, Gem, History, Users, Briefcase, HeadphonesIcon } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function Benefits() {
   const benefits = [
-    {
-      title: "Qualidade Garantia",
-      description: "Equipamentos de alta qualidade e certificados.",
-      icon: <Award size={20} />
-    },
-    {
-      title: "Assistência Técnica",
-      description: "Manutenção e suporte sempre que precisar.",
-      icon: <Wrench size={20} />
-    },
-    {
-      title: "Conformidade Legal",
-      description: "Cumprimos todas as normas e regulamentos.",
-      icon: <ShieldCheck size={20} />
-    },
-    {
-      title: "Atendimento Premium",
-      description: "Soluções personalizadas para cada cliente.",
-      icon: <Gem size={20} />
-    }
+    "Equipamentos certificados de alta qualidade",
+    "Técnicos qualificados e experientes",
+    "Atendimento rápido e personalizado",
+    "Solução para empresas de todos os portes",
+    "Cumprimento das normas de segurança"
   ];
 
   return (
@@ -34,36 +19,30 @@ export default function Benefits() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-white border border-gray-100 shadow-sm p-6 md:p-8 lg:p-10 rounded-[2rem] relative overflow-hidden"
+          className="relative overflow-hidden"
         >
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 relative z-10 items-stretch">
             
             {/* Esquerda: Indicadores e texto */}
             <div className="lg:col-span-3 flex flex-col justify-center">
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                  <History size={20} className="text-pro-red mb-2" />
-                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+5</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Anos de experiência</div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-6 mb-8">
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="border-l-2 border-pro-red pl-3 py-0.5">
+                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+5</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Anos de<br/>experiência</div>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                  <Users size={20} className="text-pro-red mb-2" />
-                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+200</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Clientes</div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="border-l-2 border-pro-red pl-3 py-0.5">
+                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+200</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Clientes<br/>satisfeitos</div>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                  <Briefcase size={20} className="text-pro-red mb-2" />
-                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+1500</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Projetos</div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="border-l-2 border-pro-red pl-3 py-0.5">
+                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+1.5k</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Projetos<br/>entregues</div>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-                  <HeadphonesIcon size={20} className="text-pro-red mb-2" />
-                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">24/7</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Assistência</div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="border-l-2 border-pro-red pl-3 py-0.5">
+                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">24/7</div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Assistência<br/>técnica</div>
                 </motion.div>
               </div>
-              
-              <div className="w-12 h-[2px] bg-pro-red/30 mb-5"></div>
               
               <p className="text-gray-600 text-sm leading-relaxed font-light">
                 A Pro Extintores dedica-se a proteger vidas e patrimónios, garantindo excelência, rigor e conformidade com as mais exigentes normas de segurança contra incêndios em Moçambique.
@@ -81,15 +60,15 @@ export default function Benefits() {
             </div>
 
             {/* Direita: Título e Lista de Vantagens */}
-            <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="lg:col-span-5 flex flex-col justify-center pl-0 lg:pl-4">
               <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-3 flex items-center gap-3">
                 <span className="w-6 h-[1px] bg-pro-red"></span> Vantagens
               </h2>
-              <h3 className="text-2xl sm:text-3xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-8">
                 Por que escolher a <span className="text-gray-600">Pro Extintores?</span>
               </h3>
 
-              <div className="flex flex-col gap-5 mt-2">
+              <div className="flex flex-col gap-4">
                 {benefits.map((benefit, index) => (
                   <motion.div 
                     initial={{ opacity: 0, x: 20 }}
@@ -97,15 +76,12 @@ export default function Benefits() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     key={index} 
-                    className="flex items-start gap-4 group"
+                    className="flex items-center gap-3 group"
                   >
-                    <div className="flex-shrink-0 text-pro-red transition-colors mt-1">
-                      {benefit.icon}
+                    <div className="flex-shrink-0 text-pro-red">
+                      <CheckCircle2 size={20} />
                     </div>
-                    <div>
-                      <h4 className="text-[14px] font-bold text-gray-900 mb-1 tracking-tight">{benefit.title}</h4>
-                      <p className="text-gray-600 leading-relaxed font-light text-[12px]">{benefit.description}</p>
-                    </div>
+                    <p className="text-[15px] font-medium text-gray-800 tracking-tight">{benefit}</p>
                   </motion.div>
                 ))}
               </div>
