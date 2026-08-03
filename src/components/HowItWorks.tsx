@@ -33,7 +33,7 @@ export default function HowItWorks() {
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex justify-center items-center gap-3">
             <span className="w-6 h-[1px] bg-pro-red"></span> Como Funciona <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight leading-[1.1]">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
             Processo simplificado e <br className="hidden sm:block"/> focado na sua <span className="text-gray-500">segurança.</span>
           </h3>
         </div>
@@ -51,16 +51,16 @@ export default function HowItWorks() {
               key={index} 
               className="relative group flex flex-col items-center text-center"
             >
-              <div className="bg-[#050505] inline-flex items-center justify-center w-24 h-24 rounded-full border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-6 relative z-10 group-hover:border-pro-red/50 group-hover:bg-pro-red/5 transition-all duration-500">
+              <div className="bg-[#050505] inline-flex items-center justify-center w-24 h-24 rounded-full border border-gray-200 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-6 relative z-10 group-hover:border-pro-red/50 group-hover:bg-pro-red/5 transition-all duration-500">
                 {/* Index Number Background */}
                 <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-pro-red text-black font-bold flex items-center justify-center text-xs shadow-lg shadow-pro-red/20">{index + 1}</span>
-                <div className="text-white group-hover:text-pro-red transition-colors relative z-10 scale-100">
+                <div className="text-gray-900 group-hover:text-pro-red transition-colors relative z-10 scale-100">
                   {step.icon}
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-bold text-white mb-2 tracking-tight">{step.title}</h4>
-                <p className="text-gray-400 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
+                <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{step.title}</h4>
+                <p className="text-gray-600 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
               </div>
             </motion.div>
           ))}

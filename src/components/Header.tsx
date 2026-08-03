@@ -30,7 +30,7 @@ export default function Header() {
       <div className={`transition-all duration-500 w-full max-w-7xl mx-auto px-6 ${isScrolled ? 'md:px-4' : 'px-6'}`}>
         <div className={`flex justify-between items-center transition-all duration-500 ${
           isScrolled 
-            ? 'glass-panel rounded-full px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]' 
+            ? 'bg-white border border-gray-100 shadow-sm rounded-full px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]' 
             : 'bg-transparent py-2'
         }`}>
           {/* Logo */}
@@ -38,7 +38,7 @@ export default function Header() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pro-red to-pro-dark flex items-center justify-center text-white shadow-lg shadow-pro-red/20">
               <Flame size={20} />
             </div>
-            <span className="text-xl font-bold font-heading tracking-tight text-white">
+            <span className={`text-xl font-bold font-heading tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               PRO EXTINTORES<span className="text-pro-red">.</span>
             </span>
           </Link>
@@ -49,7 +49,7 @@ export default function Header() {
               <Link 
                 key={link.name} 
                 to={link.href} 
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide"
+                className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}
               >
                 {link.name}
               </Link>
@@ -64,7 +64,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10"
+            className="md:hidden text-gray-900 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -75,18 +75,18 @@ export default function Header() {
       {/* Mobile Nav */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full mt-4 px-6 pb-6">
-          <div className="glass-panel rounded-3xl p-6 flex flex-col gap-2 shadow-2xl">
+          <div className="bg-white border border-gray-100 shadow-sm rounded-3xl p-6 flex flex-col gap-2 shadow-2xl">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 to={link.href} 
-                className="py-3 px-4 text-white font-medium text-lg rounded-xl hover:bg-white/5 transition-colors"
+                className="py-3 px-4 text-gray-900 font-medium text-lg rounded-xl hover:bg-gray-50 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 mt-2 border-t border-white/10">
+            <div className="pt-4 mt-2 border-t border-gray-200">
               <Link
                 to="/#contact"
                 className="flex justify-center items-center gap-2 btn-primary text-white w-full py-3.5 rounded-lg font-medium"
