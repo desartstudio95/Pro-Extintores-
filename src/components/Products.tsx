@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,20 @@ export default function Products() {
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { current } = scrollRef;
+        if (current.scrollLeft + current.clientWidth >= current.scrollWidth - 10) {
+          current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          current.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+      }
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
 
   const products = [
     {
@@ -55,7 +69,7 @@ export default function Products() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
-              <span className="w-6 h-[1px] bg-pro-red"></span> Produtos de Excelência
+              <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
               Nossos <span className="text-gray-500">Produtos</span>
@@ -93,6 +107,9 @@ export default function Products() {
                   alt={product.name} 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute top-2 right-2 md:top-3 md:right-3 z-20 bg-green-500/90 backdrop-blur-sm text-white text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                  Disponível
+                </div>
                 <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 z-20">
                   <h4 className="text-base md:text-lg font-bold text-white tracking-tight">{product.name}</h4>
                 </div>
