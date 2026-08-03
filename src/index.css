@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pro-red: #E53935;
+  --color-pro-dark: #B71C1C;
+  --color-pro-blue: #0B192C; /* Dark blue for specific sections */
+  --color-pro-black: #050505;
+  --color-pro-light: #F2F2F2;
+  
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1A202C; /* Gray 900 */
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  border-right: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 57, 53, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  filter: brightness(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1A202C;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.dot-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.accent-glow {
+  background: radial-gradient(circle at 50% -10%, rgba(229, 57, 53, 0.15) 0%, transparent 60%);
+}
