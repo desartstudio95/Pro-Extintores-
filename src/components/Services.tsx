@@ -37,20 +37,20 @@ export default function Services() {
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
               <span className="w-6 h-[1px] bg-pro-red"></span> Nossos Serviços
             </h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-8">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-6">
               Soluções completas em proteção <span className="text-gray-500">contra incêndios</span>
             </h3>
             
-            <Link to="/#contact" className="group inline-flex items-center gap-3 bg-white text-black px-6 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors">
+            <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors text-sm">
               Ver todos os serviços
-              <div className="w-8 h-8 rounded-full bg-black text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <ArrowRight size={16} />
+              <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ArrowRight size={14} />
               </div>
             </Link>
           </div>
 
           {/* Right Column (Cards) */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -58,10 +58,10 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="bg-white border border-gray-100 shadow-sm p-4 rounded-[1.5rem] flex flex-col group hover:bg-white/[0.06] transition-all duration-500 focus-within:ring-2 focus-within:ring-pro-red/50"
+                className="bg-white border border-gray-100 shadow-sm p-3 rounded-2xl flex flex-col group hover:border-gray-200 transition-all duration-500"
               >
-                <div className="w-full h-48 rounded-xl overflow-hidden mb-5 relative">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                <div className="w-full h-40 rounded-xl overflow-hidden mb-4 relative">
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
                   <img 
                     src={service.image} 
                     alt={service.title} 
@@ -69,13 +69,13 @@ export default function Services() {
                   />
                 </div>
                 
-                <div className="px-2 pb-2 flex-grow flex flex-col">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">{service.title}</h4>
-                  <p className="text-gray-600 leading-relaxed font-light text-sm mb-6 flex-grow">{service.description}</p>
+                <div className="px-1 pb-1 flex-grow flex flex-col">
+                  <h4 className="text-base font-bold text-gray-900 mb-1.5 tracking-tight">{service.title}</h4>
+                  <p className="text-gray-600 leading-relaxed font-light text-xs mb-4 flex-grow">{service.description}</p>
                   
-                  <Link to="/#contact" className="inline-flex items-center gap-2 text-pro-red font-semibold text-sm hover:text-gray-900 transition-colors mt-auto w-max">
+                  <Link to="/#contact" className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
                     Saiba mais
-                    <ArrowRight size={14} />
+                    <ArrowRight size={12} />
                   </Link>
                 </div>
               </motion.div>

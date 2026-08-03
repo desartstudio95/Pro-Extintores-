@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Products() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { current } = scrollRef;
+      const scrollAmount = direction === 'left' ? -300 : 300;
+      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   const products = [
     {
       name: "Extintores",
@@ -42,7 +52,7 @@ export default function Products() {
   return (
     <section id="products" className="relative z-10 scroll-mt-24 pt-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div>
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
               <span className="w-6 h-[1px] bg-pro-red"></span> Produtos de Excelência
@@ -51,55 +61,47 @@ export default function Products() {
               Nossos <span className="text-gray-500">Produtos</span>
             </h3>
           </div>
+          <div className="flex items-center gap-3">
+            <button 
+              onClick={() => scroll('left')}
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={() => scroll('right')}
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
 
-        <div className="relative overflow-hidden w-full max-w-full pb-4">
-          <div className="absolute inset-y-0 left-0 w-8 sm:w-16 bg-gradient-to-r from-pro-black to-transparent z-30 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-8 sm:w-16 bg-gradient-to-l from-pro-black to-transparent z-30 pointer-events-none"></div>
-
-          <div className="flex animate-scroll w-max">
-            {/* List 1 */}
-            <div className="flex gap-4 md:gap-6 pr-4 md:pr-6">
-              {products.map((product, index) => (
-                <div
-                  key={index}
-                  className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[220px] md:w-[260px] shrink-0"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 z-20">
-                    <h4 className="text-lg md:text-xl font-bold text-white tracking-tight">{product.name}</h4>
-                  </div>
+        <div className="relative w-full pb-4">
+          <div 
+            ref={scrollRef}
+            className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4"
+          >
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[160px] md:w-[200px] shrink-0 snap-start"
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 z-20">
+                  <h4 className="text-base md:text-lg font-bold text-white tracking-tight">{product.name}</h4>
                 </div>
-              ))}
-            </div>
-            {/* List 2 */}
-            <div className="flex gap-4 md:gap-6 pr-4 md:pr-6">
-              {products.map((product, index) => (
-                <div
-                  key={`copy-${index}`}
-                  className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[220px] md:w-[260px] shrink-0"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 z-20">
-                    <h4 className="text-lg md:text-xl font-bold text-white tracking-tight">{product.name}</h4>
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
         
-        <div className="mt-12 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-100 text-gray-900 border border-gray-300 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors">
             Ver todos os produtos
             <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
