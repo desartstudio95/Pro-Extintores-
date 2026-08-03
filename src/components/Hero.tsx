@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative pt-40 md:pt-48 pb-20 flex items-center justify-center overflow-hidden z-10 min-h-screen">
+    <section id="home" className="relative flex items-center justify-center overflow-hidden z-10 min-h-[100svh] lg:min-h-screen pt-28 pb-20 md:pt-32 md:pb-24 lg:pt-24 lg:pb-20">
       
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
@@ -53,7 +53,7 @@ export default function Hero() {
               <ChevronRight size={12} className="text-gray-500 ml-1" />
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading leading-[1.05] mb-6 text-white tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-[1.05] mb-6 text-white tracking-tight">
               Prevenção que <br className="hidden md:block"/> salva <span className="text-transparent bg-clip-text bg-gradient-to-r from-pro-red to-orange-400">vidas e património.</span>
             </h1>
             

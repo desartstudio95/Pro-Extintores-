@@ -18,7 +18,7 @@ export default function App() {
       <div className="fixed top-0 inset-x-0 h-[800px] accent-glow pointer-events-none z-0"></div>
       
       <Header />
-      <main className="flex-grow flex flex-col gap-10 pb-10">
+      <main className="flex-grow flex flex-col gap-16 md:gap-20 lg:gap-24 pb-16">
         <Hero />
         <About />
         <Services />

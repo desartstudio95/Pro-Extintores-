@@ -35,7 +35,7 @@ export default function FAQ() {
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex justify-center items-center gap-3">
             <span className="w-6 h-[1px] bg-pro-red"></span> Suporte <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold font-heading text-white tracking-tight leading-[1.1]">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight leading-[1.1]">
             Dúvidas Frequentes.
           </h3>
         </div>

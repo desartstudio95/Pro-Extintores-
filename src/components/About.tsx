@@ -25,7 +25,7 @@ export default function About() {
               <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
                 <span className="w-6 h-[1px] bg-pro-red"></span> Sobre Nós
               </h2>
-              <h3 className="text-2xl md:text-3xl font-bold font-heading text-white tracking-tight leading-[1.1] mb-6">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight leading-[1.1] mb-6">
                 A sua segurança é o nosso <span className="text-gray-400">compromisso.</span>
               </h3>
               <p className="text-gray-400 text-base leading-relaxed font-light mb-8">

@@ -22,7 +22,7 @@ export default function Contact() {
               <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-3 flex items-center gap-3">
                 <span className="w-6 h-[1px] bg-pro-red"></span> Contactos
               </h2>
-              <h3 className="text-3xl md:text-4xl font-bold font-heading mb-5 tracking-tight leading-[1.1] text-white">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-5 tracking-tight leading-[1.1] text-white">
                 Estamos aqui <span className="text-gray-400">para si.</span>
               </h3>
               <p className="text-gray-400 text-base mb-10 max-w-md font-light leading-relaxed">
