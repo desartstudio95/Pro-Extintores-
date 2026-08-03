@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flame, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -9,14 +10,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
           
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
+            <Link to="/#home" className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pro-red to-pro-dark flex items-center justify-center text-white shadow-lg shadow-pro-red/20">
                 <Flame size={20} />
               </div>
               <span className="text-xl font-bold font-heading tracking-tight">
                 PRO EXTINTORES<span className="text-pro-red">.</span>
               </span>
-            </div>
+            </Link>
             <p className="text-gray-400 font-light leading-relaxed mb-8 text-sm pr-4">
               A sua parceira de confiança em Moçambique para soluções integradas de Segurança Contra Incêndios e Segurança Eletrónica.
             </p>
@@ -36,19 +37,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Empresa</h4>
             <ul className="space-y-4 font-light text-sm">
-              <li><a href="#about" className="text-gray-400 hover:text-pro-red transition-colors">Sobre Nós</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-pro-red transition-colors">Contactos</a></li>
-              <li><a href="#faq" className="text-gray-400 hover:text-pro-red transition-colors">Suporte</a></li>
+              <li><Link to="/sobre-nos" className="text-gray-400 hover:text-pro-red transition-colors">Sobre Nós</Link></li>
+              <li><Link to="/#contact" className="text-gray-400 hover:text-pro-red transition-colors">Contactos</Link></li>
+              <li><Link to="/#faq" className="text-gray-400 hover:text-pro-red transition-colors">Suporte</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Serviços</h4>
             <ul className="space-y-4 font-light text-sm">
-              <li><a href="#services" className="text-gray-400 hover:text-pro-red transition-colors">Segurança Contra Incêndios</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-pro-red transition-colors">Segurança Eletrónica</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-pro-red transition-colors">Equipamentos de Segurança</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-pro-red transition-colors">Manutenção</a></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-pro-red transition-colors">Segurança Contra Incêndios</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-pro-red transition-colors">Segurança Eletrónica</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-pro-red transition-colors">Equipamentos de Segurança</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-pro-red transition-colors">Manutenção</Link></li>
             </ul>
           </div>
 

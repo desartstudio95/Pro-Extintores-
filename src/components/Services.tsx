@@ -1,84 +1,87 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Flame, ShieldAlert, HardHat, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Services() {
   const services = [
     {
-      icon: <Flame size={24} />,
-      title: "Segurança Contra Incêndios",
-      description: "Fornecimento de extintores, instalação de sistemas de deteção e alarme, manutenção técnica, recarga de extintores e consultoria especializada.",
-      featured: true,
-      colSpan: "lg:col-span-3"
+      image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=600",
+      title: "Extintores e Redes",
+      description: "Fornecimento, revisão e recarga de extintores (Pó ABC, CO2, H2O). Mangueiras, hidrantes, carretéis e mantas de incêndio.",
     },
     {
-      icon: <ShieldAlert size={24} />,
+      image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=600",
+      title: "Detecção e Prevenção",
+      description: "Instalação de Sistemas de Detecção e Alarme de Incêndios. Assessoria especializada em medidas de prevenção e combate.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=600",
       title: "Segurança Electrónica",
-      description: "Instalação de sistemas de intrusão, CCTV, vedações eléctricas, automação de portões e alarmes de emergência.",
-      featured: false,
-      colSpan: "lg:col-span-3 md:col-span-1"
+      description: "Instalação de câmeras de vigilância, sistemas de intrusão, vedações eléctricas e serviços de automação de portões.",
     },
     {
-      icon: <HardHat size={24} />,
-      title: "Equipamentos de Segurança",
-      description: "Fornecimento de EPIs, EPCs, kits de primeiros socorros, placas de sinalização e sinalização de emergência.",
-      featured: false,
-      colSpan: "lg:col-span-3 md:col-span-1"
+      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600",
+      title: "Protecção e Sinalização",
+      description: "Equipamentos de Protecção Individual (EPI), KITs de primeiros socorros, sirenes, alarmes de emergência e sinalização.",
     }
   ];
 
   return (
     <section id="services" className="relative z-10 scroll-mt-24 pt-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12 md:mb-16 lg:flex items-end justify-between gap-8">
-          <div className="max-w-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* Left Column */}
+          <div className="lg:col-span-4 flex flex-col items-start text-left">
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
-              <span className="w-6 h-[1px] bg-pro-red"></span> Nossas Soluções
+              <span className="w-6 h-[1px] bg-pro-red"></span> Nossos Serviços
             </h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight leading-[1.1]">
-              Proteção integral para <br className="hidden md:block"/> <span className="text-gray-500">o seu negócio.</span>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight leading-[1.1] mb-8">
+              Soluções completas em proteção <span className="text-gray-500">contra incêndios</span>
             </h3>
+            
+            <Link to="/#contact" className="group inline-flex items-center gap-3 bg-white text-black px-6 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors">
+              Ver todos os serviços
+              <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ArrowRight size={16} />
+              </div>
+            </Link>
           </div>
-          <p className="text-gray-400 text-base lg:max-w-md mt-6 lg:mt-0 font-light leading-relaxed">
-            Oferecemos soluções completas e avançadas em prevenção e combate a incêndios, além de sistemas robustos de segurança eletrónica.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={index}
-              className={`glass-panel p-6 md:p-8 rounded-[1.5rem] flex flex-col group hover:bg-white/[0.06] transition-all duration-500 relative overflow-hidden focus-within:ring-2 focus-within:ring-pro-red/50 ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
-            >
-              <a href="#contact" className="absolute inset-0 z-20"><span className="sr-only">Saber mais sobre {service.title}</span></a>
-              
-              {service.featured && (
-                <div className="absolute top-0 right-0 w-48 h-48 bg-pro-red/10 rounded-full blur-[80px] -z-10 group-hover:bg-pro-red/20 transition-colors duration-700"></div>
-              )}
-              
-              <div className="flex justify-between items-start mb-12 relative z-10">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${
-                  service.featured 
-                    ? 'bg-pro-red/20 border-pro-red/30 text-pro-red' 
-                    : 'bg-white/5 border-white/10 text-white'
-                }`}>
-                  {service.icon}
+          {/* Right Column (Cards) */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                key={index}
+                className="glass-panel p-4 rounded-[1.5rem] flex flex-col group hover:bg-white/[0.06] transition-all duration-500 focus-within:ring-2 focus-within:ring-pro-red/50"
+              >
+                <div className="w-full h-48 rounded-xl overflow-hidden mb-5 relative">
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                  />
                 </div>
-                <div className="w-8 h-8 rounded-full border border-white/10 bg-black/40 flex items-center justify-center text-gray-400 group-hover:bg-pro-red group-hover:text-white group-hover:border-pro-red transform group-hover:rotate-45 transition-all duration-300 shadow-sm">
-                  <ArrowUpRight size={16} />
+                
+                <div className="px-2 pb-2 flex-grow flex flex-col">
+                  <h4 className="text-xl font-bold text-white mb-2 tracking-tight">{service.title}</h4>
+                  <p className="text-gray-400 leading-relaxed font-light text-sm mb-6 flex-grow">{service.description}</p>
+                  
+                  <Link to="/#contact" className="inline-flex items-center gap-2 text-pro-red font-semibold text-sm hover:text-white transition-colors mt-auto w-max">
+                    Saiba mais
+                    <ArrowRight size={14} />
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
+            ))}
+          </div>
 
-              <div className="mt-auto relative z-10">
-                <h4 className="text-xl font-bold text-white mb-2 tracking-tight">{service.title}</h4>
-                <p className="text-gray-400 leading-relaxed font-light text-sm">{service.description}</p>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

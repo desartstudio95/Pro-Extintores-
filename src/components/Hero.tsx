@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, ChevronRight, ShieldCheck, Flame, Clock, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const bgImages = [
   "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=2000",
@@ -19,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex flex-col justify-center overflow-hidden z-10 min-h-[100svh] lg:min-h-[90vh] pt-32 pb-24 md:pt-36 md:pb-32 lg:pt-28 lg:pb-48">
+    <section id="home" className="relative flex flex-col justify-center items-center overflow-hidden z-10 min-h-[100svh] pt-24 pb-20 md:pt-28 md:pb-28 lg:pt-32 lg:pb-40">
       
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
@@ -62,14 +63,14 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-              <a href="#contact" className="flex justify-center items-center gap-2 btn-primary px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-pro-red/30 transition-all group">
+              <Link to="/#contact" className="flex justify-center items-center gap-2 btn-primary px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-pro-red/30 transition-all group">
                 Pedir Orçamento
                 <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#services" className="flex justify-center items-center gap-2 btn-outline hover:bg-white/5 px-5 py-2.5 rounded-lg font-semibold text-white w-full sm:w-auto text-sm group bg-white/[0.02]">
+              </Link>
+              <Link to="/#services" className="flex justify-center items-center gap-2 btn-outline hover:bg-white/5 px-5 py-2.5 rounded-lg font-semibold text-white w-full sm:w-auto text-sm group bg-white/[0.02]">
                 Ver Serviços
                 <ChevronRight size={16} className="text-gray-400 group-hover:text-white transition-colors" />
-              </a>
+              </Link>
             </div>
 
             <motion.div 
