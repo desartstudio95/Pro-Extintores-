@@ -51,10 +51,10 @@ export default function HowItWorks() {
               key={index} 
               className="relative group flex flex-col items-center text-center"
             >
-              <div className="bg-[#050505] inline-flex items-center justify-center w-24 h-24 rounded-full border border-gray-200 shadow-[0_0_30px_rgba(0,0,0,0.5)] mb-6 relative z-10 group-hover:border-pro-red/50 group-hover:bg-pro-red/5 transition-all duration-500">
+              <div className="bg-pro-red inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.2)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
                 {/* Index Number Background */}
-                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-pro-red text-black font-bold flex items-center justify-center text-xs shadow-lg shadow-pro-red/20">{index + 1}</span>
-                <div className="text-gray-900 group-hover:text-pro-red transition-colors relative z-10 scale-100">
+                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-gray-900 text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10">{index + 1}</span>
+                <div className="text-white relative z-10 scale-100">
                   {step.icon}
                 </div>
               </div>

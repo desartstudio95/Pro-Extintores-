@@ -41,22 +41,22 @@ export default function Benefits() {
             {/* Esquerda: Indicadores e texto */}
             <div className="lg:col-span-3 flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div>
-                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-1">+5</div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+5</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Anos de experiência</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-1">+200</div>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+200</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Clientes</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-1">+1500</div>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+1500</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Projetos</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-1">24/7</div>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
+                  <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">24/7</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Assistência</div>
-                </div>
+                </motion.div>
               </div>
               
               <div className="w-12 h-[2px] bg-pro-red/30 mb-5"></div>
@@ -85,7 +85,7 @@ export default function Benefits() {
                 Por que escolher a <span className="text-gray-600">Pro Extintores?</span>
               </h3>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-5 mt-2">
                 {benefits.map((benefit, index) => (
                   <motion.div 
                     initial={{ opacity: 0, x: 20 }}
@@ -93,14 +93,14 @@ export default function Benefits() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     key={index} 
-                    className="p-3.5 rounded-xl bg-gray-50/80 border border-gray-100 hover:border-gray-200 hover:bg-white transition-colors group shadow-sm flex items-center gap-4"
+                    className="flex items-start gap-4 group"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center text-gray-900 border border-gray-200 group-hover:text-pro-red group-hover:bg-pro-red/10 group-hover:border-pro-red/20 transition-colors">
+                    <div className="flex-shrink-0 text-pro-red transition-colors mt-1">
                       {benefit.icon}
                     </div>
                     <div>
-                      <h4 className="text-[13px] font-bold text-gray-900 mb-0.5 tracking-tight">{benefit.title}</h4>
-                      <p className="text-gray-600 leading-relaxed font-light text-[11px]">{benefit.description}</p>
+                      <h4 className="text-[14px] font-bold text-gray-900 mb-1 tracking-tight">{benefit.title}</h4>
+                      <p className="text-gray-600 leading-relaxed font-light text-[12px]">{benefit.description}</p>
                     </div>
                   </motion.div>
                 ))}
