@@ -45,11 +45,10 @@ export default function Products() {
   const products = [
     {
       name: "Extintores",
-      image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=600"
-    },
+      image: "https://i.ibb.co/0R9hdfpx/EXTABF6-FA.jpg"
     {
       name: "Mangueiras",
-      image: "https://images.unsplash.com/photo-1621287955562-b9138ce316a3?auto=format&fit=crop&q=80&w=600"
+      image: "https://www.motopompe-incendie.com/wp-content/uploads/2025/04/Flexible-rond-refoulement-incendie-DN25-PS-15-bar.png"
     },
     {
       name: "Detectores",

@@ -6,22 +6,22 @@ const benefits = [
   {
     icon: <ShieldCheck size={28} className="text-white" />,
     title: "Qualidade Garantida",
-    description: "Equipamentos certificados."
+    description: "Equipamentos de alta qualidade e certificados."
   },
   {
     icon: <Wrench size={28} className="text-white" />,
     title: "Assistência Técnica",
-    description: "Manutenção e suporte total."
+    description: "Manutenção e suporte sempre que precisar."
   },
   {
     icon: <FileCheck size={28} className="text-white" />,
     title: "Conformidade Legal",
-    description: "De acordo com as normas."
+    description: "Cumprimos todas as normas e regulamentos."
   },
   {
     icon: <Zap size={28} className="text-white" />,
     title: "Ação Rápida",
-    description: "Atendimento sempre ágil."
+    description: "Atendimento personalizado e ágil."
   }
 ];
 
