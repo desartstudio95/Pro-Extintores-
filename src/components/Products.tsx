@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Products() {
@@ -33,14 +33,6 @@ export default function Products() {
       }
     };
   }, [isHovered]);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const { current } = scrollRef;
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
 
   const products = [
     {
@@ -88,20 +80,6 @@ export default function Products() {
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
               Nossos <span className="text-gray-500">Produtos</span>
             </h3>
-          </div>
-          <div className="flex items-center gap-3">
-            <button 
-              onClick={() => scroll('left')}
-              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button 
-              onClick={() => scroll('right')}
-              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
-            >
-              <ChevronRight size={20} />
-            </button>
           </div>
         </div>
 

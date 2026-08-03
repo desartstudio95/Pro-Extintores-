@@ -1,28 +1,28 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, MapPin, UserCog, CalendarClock } from 'lucide-react';
+import { Award, Wrench, ShieldCheck, Gem, History, Users, Briefcase, HeadphonesIcon } from 'lucide-react';
 
 export default function Benefits() {
   const benefits = [
     {
-      title: "Qualidade Garantida",
-      description: "Trabalhamos com equipamentos certificados e aprovados pelas normas internacionais.",
-      icon: <Award size={18} />
+      title: "Qualidade Garantia",
+      description: "Equipamentos de alta qualidade e certificados.",
+      icon: <Award size={20} />
     },
     {
-      title: "Atendimento Nacional",
-      description: "Cobertura operacional para atender clientes em diversas regiões de Moçambique.",
-      icon: <MapPin size={18} />
+      title: "Assistência Técnica",
+      description: "Manutenção e suporte sempre que precisar.",
+      icon: <Wrench size={20} />
     },
     {
-      title: "Técnicos Especializados",
-      description: "Equipa altamente treinada e certificada para instalações complexas.",
-      icon: <UserCog size={18} />
+      title: "Conformidade Legal",
+      description: "Cumprimos todas as normas e regulamentos.",
+      icon: <ShieldCheck size={20} />
     },
     {
-      title: "Manutenção Preventiva",
-      description: "Programas de revisão periódica para garantir a operacionalidade 24/7.",
-      icon: <CalendarClock size={18} />
+      title: "Atendimento Premium",
+      description: "Soluções personalizadas para cada cliente.",
+      icon: <Gem size={20} />
     }
   ];
 
@@ -42,18 +42,22 @@ export default function Benefits() {
             <div className="lg:col-span-3 flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                  <History size={20} className="text-pro-red mb-2" />
                   <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+5</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Anos de experiência</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                  <Users size={20} className="text-pro-red mb-2" />
                   <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+200</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Clientes</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+                  <Briefcase size={20} className="text-pro-red mb-2" />
                   <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">+1500</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Projetos</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
+                  <HeadphonesIcon size={20} className="text-pro-red mb-2" />
                   <div className="text-2xl font-bold font-heading text-gray-900 tracking-tight mb-1">24/7</div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Assistência</div>
                 </motion.div>
