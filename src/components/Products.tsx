@@ -86,19 +86,19 @@ export default function Products() {
               <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
-              Nossos <span className="text-gray-500">Produtos</span>
+              Nossos <span className="text-slate-900">Produtos</span>
             </h3>
           </div>
           <div className="flex items-center gap-3">
             <button 
               onClick={() => scroll('left')}
-              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-slate-900 hover:bg-gray-50 hover:text-pro-red transition-colors"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-pro-red transition-colors"
+              className="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-slate-900 hover:bg-gray-50 hover:text-pro-red transition-colors"
             >
               <ChevronRight size={20} />
             </button>

@@ -23,9 +23,9 @@ export default function Contact() {
                 <span className="w-6 h-[1px] bg-pro-red"></span> Contactos
               </h2>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-5 tracking-tight leading-[1.1] text-gray-900">
-                Estamos aqui <span className="text-gray-600">para si.</span>
+                Estamos aqui <span className="text-slate-900">para si.</span>
               </h3>
-              <p className="text-gray-600 text-base mb-10 max-w-md font-light leading-relaxed">
+              <p className="text-slate-900 text-base mb-10 max-w-md font-light leading-relaxed">
                 A nossa equipa técnica está pronta para avaliar as suas necessidades e fornecer a melhor solução em segurança.
               </p>
 
@@ -36,7 +36,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base mb-1 text-gray-900 tracking-tight">Escritório Central</h4>
-                    <p className="text-gray-600 text-sm font-light leading-relaxed">Maputo<br/>Moçambique</p>
+                    <p className="text-slate-900 text-sm font-light leading-relaxed">Maputo<br/>Moçambique</p>
                   </div>
                 </div>
                 
@@ -46,7 +46,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base mb-1 text-gray-900 tracking-tight">Linhas de Apoio</h4>
-                    <p className="text-gray-600 text-sm font-light leading-relaxed">+258 87 790 4074<br/>+258 87 310 4074</p>
+                    <p className="text-slate-900 text-sm font-light leading-relaxed">+258 87 790 4074<br/>+258 87 310 4074</p>
                   </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base mb-1 text-gray-900 tracking-tight">Horário Oficial</h4>
-                    <p className="text-gray-600 text-sm font-light leading-relaxed">Segunda a Sexta-feira<br/>08:00 às 17:00</p>
+                    <p className="text-slate-900 text-sm font-light leading-relaxed">Segunda a Sexta-feira<br/>08:00 às 17:00</p>
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                 
                 <form className="space-y-5">
                   <div>
-                    <label className="block text-[10px] font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">Nome Completo</label>
+                    <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Nome Completo</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
@@ -79,7 +79,7 @@ export default function Contact() {
                   
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">Telemóvel</label>
+                      <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Telemóvel</label>
                       <input 
                         type="tel" 
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
@@ -87,7 +87,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">Email (Opcional)</label>
+                      <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Email (Opcional)</label>
                       <input 
                         type="email" 
                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
@@ -97,7 +97,7 @@ export default function Contact() {
                   </div>
                   
                   <div>
-                    <label className="block text-[10px] font-semibold text-gray-600 mb-1.5 uppercase tracking-wider">Assunto</label>
+                    <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Assunto</label>
                     <div className="relative">
                       <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all appearance-none cursor-pointer text-gray-900 text-sm">
                         <option className="bg-[#050505] text-gray-900">Pedido de Orçamento</option>
@@ -105,7 +105,7 @@ export default function Contact() {
                         <option className="bg-[#050505] text-gray-900">Dúvidas e Informações</option>
                       </select>
                       <div className="absolute top-1/2 right-4 -translate-y-1/2 pointer-events-none">
-                        <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg className="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                       </div>
                     </div>
                   </div>

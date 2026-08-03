@@ -35,7 +35,7 @@ export default function Services() {
             <span className="w-6 h-[1px] bg-pro-red"></span> Nossos Serviços <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-6">
-            Soluções completas em proteção <span className="text-gray-500">contra incêndios</span>
+            Soluções completas em proteção <span className="text-slate-900">contra incêndios</span>
           </h3>
         </div>
 
@@ -61,7 +61,7 @@ export default function Services() {
               
               <div className="px-1 pb-1 flex-grow flex flex-col">
                 <h4 className="text-sm font-bold text-gray-900 mb-1.5 tracking-tight">{service.title}</h4>
-                <p className="text-gray-600 leading-relaxed font-light text-[11px] mb-4 flex-grow">{service.description}</p>
+                <p className="text-slate-900 leading-relaxed font-light text-[11px] mb-4 flex-grow">{service.description}</p>
                 
                 <Link to="/#contact" className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
                   Saiba mais

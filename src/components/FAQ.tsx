@@ -55,7 +55,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-bold text-base text-gray-900 pr-4 leading-tight">{faq.question}</span>
-                <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === index ? 'bg-pro-red text-gray-900 shadow-lg shadow-pro-red/20' : 'bg-gray-50 text-gray-600 group-hover:bg-gray-100'}`}>
+                <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === index ? 'bg-pro-red text-gray-900 shadow-lg shadow-pro-red/20' : 'bg-gray-50 text-slate-900 group-hover:bg-gray-100'}`}>
                   {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                 </span>
               </button>
@@ -70,7 +70,7 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 md:px-6 pb-5">
-                      <p className="text-gray-600 text-sm leading-relaxed font-light pt-3 border-t border-white/5">
+                      <p className="text-slate-900 text-sm leading-relaxed font-light pt-3 border-t border-white/5">
                         {faq.answer}
                       </p>
                     </div>

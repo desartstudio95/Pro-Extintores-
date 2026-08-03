@@ -49,7 +49,7 @@ export default function Header() {
               <Link 
                 key={link.name} 
                 to={link.href} 
-                className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}
+                className={`text-sm font-medium transition-colors tracking-wide ${isScrolled ? 'text-slate-900 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}
               >
                 {link.name}
               </Link>

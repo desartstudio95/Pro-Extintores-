@@ -34,7 +34,7 @@ export default function HowItWorks() {
             <span className="w-6 h-[1px] bg-pro-red"></span> Como Funciona <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
-            Processo simplificado e <br className="hidden sm:block"/> focado na sua <span className="text-gray-500">segurança.</span>
+            Processo simplificado e <br className="hidden sm:block"/> focado na sua <span className="text-slate-900">segurança.</span>
           </h3>
         </div>
 
@@ -53,14 +53,14 @@ export default function HowItWorks() {
             >
               <div className="bg-pro-red inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.2)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
                 {/* Index Number Background */}
-                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-gray-900 text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10">{index + 1}</span>
+                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-pro-red text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10 border-2 border-white">{index + 1}</span>
                 <div className="text-white relative z-10 scale-100">
                   {step.icon}
                 </div>
               </div>
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{step.title}</h4>
-                <p className="text-gray-600 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
+                <p className="text-slate-900 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
               </div>
             </motion.div>
           ))}

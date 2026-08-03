@@ -28,23 +28,23 @@ export default function Benefits() {
               <div className="grid grid-cols-2 gap-x-4 gap-y-6 mb-8">
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="border-l-2 border-pro-red pl-3 py-0.5">
                   <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+5</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Anos de<br/>experiência</div>
+                  <div className="text-[10px] text-slate-900 uppercase tracking-wider font-bold leading-tight">Anos de<br/>experiência</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="border-l-2 border-pro-red pl-3 py-0.5">
                   <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+200</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Clientes<br/>satisfeitos</div>
+                  <div className="text-[10px] text-slate-900 uppercase tracking-wider font-bold leading-tight">Clientes<br/>satisfeitos</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="border-l-2 border-pro-red pl-3 py-0.5">
                   <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">+1.5k</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Projetos<br/>entregues</div>
+                  <div className="text-[10px] text-slate-900 uppercase tracking-wider font-bold leading-tight">Projetos<br/>entregues</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="border-l-2 border-pro-red pl-3 py-0.5">
                   <div className="text-3xl font-bold font-heading text-gray-900 tracking-tight mb-0.5">24/7</div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold leading-tight">Assistência<br/>técnica</div>
+                  <div className="text-[10px] text-slate-900 uppercase tracking-wider font-bold leading-tight">Assistência<br/>técnica</div>
                 </motion.div>
               </div>
               
-              <p className="text-gray-600 text-sm leading-relaxed font-light">
+              <p className="text-slate-900 text-sm leading-relaxed font-light">
                 A Pro Extintores dedica-se a proteger vidas e patrimónios, garantindo excelência, rigor e conformidade com as mais exigentes normas de segurança contra incêndios em Moçambique.
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Benefits() {
                 <span className="w-6 h-[1px] bg-pro-red"></span> Vantagens
               </h2>
               <h3 className="text-2xl sm:text-3xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1] mb-8">
-                Por que escolher a <span className="text-gray-600">Pro Extintores?</span>
+                Por que escolher a <span className="text-slate-900">Pro Extintores?</span>
               </h3>
 
               <div className="flex flex-col gap-4">
