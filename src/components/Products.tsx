@@ -1,10 +1,38 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Products() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout;
+    
+    if (!isHovered) {
+      intervalId = setInterval(() => {
+        if (scrollRef.current) {
+          const { current } = scrollRef;
+          
+          // Check if we reached the end
+          if (current.scrollLeft + current.clientWidth >= current.scrollWidth - 10) {
+            // Reset to beginning
+            current.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            // Scroll right
+            current.scrollBy({ left: 200, behavior: 'smooth' });
+          }
+        }
+      }, 3000); // Auto scroll every 3 seconds
+    }
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [isHovered]);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -13,20 +41,6 @@ export default function Products() {
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        const { current } = scrollRef;
-        if (current.scrollLeft + current.clientWidth >= current.scrollWidth - 10) {
-          current.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          current.scrollBy({ left: 300, behavior: 'smooth' });
-        }
-      }
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
 
   const products = [
     {
@@ -91,7 +105,11 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="relative w-full pb-4">
+        <div 
+          className="relative w-full pb-4"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <div 
             ref={scrollRef}
             className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4"
@@ -99,7 +117,7 @@ export default function Products() {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[160px] md:w-[200px] shrink-0 snap-start"
+                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 hover:border-pro-red/50 transition-colors w-[140px] md:w-[170px] shrink-0 snap-start"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
                 <img 
@@ -107,11 +125,17 @@ export default function Products() {
                   alt={product.name} 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-2 right-2 md:top-3 md:right-3 z-20 bg-green-500/90 backdrop-blur-sm text-white text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                  Disponível
+                
+                {/* Disponível Badge */}
+                <div className="absolute top-2 right-2 z-20">
+                  <div className="flex items-center gap-1 bg-pro-red/90 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-1 rounded-full shadow-lg">
+                    <CheckCircle2 size={10} />
+                    <span>Disponível</span>
+                  </div>
                 </div>
+
                 <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 z-20">
-                  <h4 className="text-base md:text-lg font-bold text-white tracking-tight">{product.name}</h4>
+                  <h4 className="text-sm md:text-base font-bold text-white tracking-tight leading-tight">{product.name}</h4>
                 </div>
               </div>
             ))}
