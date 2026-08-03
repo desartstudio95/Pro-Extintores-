@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, ChevronRight, ShieldCheck, Flame } from 'lucide-react';
+import { ArrowRight, ChevronRight, ShieldCheck, Flame, Clock, Wrench } from 'lucide-react';
 
 const bgImages = [
   "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=2000",
@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex items-center justify-center overflow-hidden z-10 min-h-[100svh] lg:min-h-screen pt-28 pb-20 md:pt-32 md:pb-24 lg:pt-24 lg:pb-20">
+    <section id="home" className="relative flex flex-col justify-center overflow-hidden z-10 min-h-[100svh] lg:min-h-[90vh] pt-32 pb-24 md:pt-36 md:pb-32 lg:pt-28 lg:pb-48">
       
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
@@ -76,42 +76,42 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12 pt-8 border-t border-white/5 w-full md:max-w-3xl"
+              className="mt-16 flex flex-wrap items-start justify-center gap-6 sm:gap-10 md:gap-16 pt-8 border-t border-white/5 w-full md:max-w-4xl"
             >
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center text-center max-w-[120px]"
               >
-                <div className="flex items-center gap-1.5 mb-1">
-                  <Flame className="text-pro-red" size={20} />
-                  <span className="text-2xl md:text-3xl font-bold text-white">+5<span className="text-pro-red text-xl">k</span></span>
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+                  <Clock className="text-pro-red" size={20} />
                 </div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold flex items-center gap-1">Extintores Instalados</span>
+                <span className="text-sm font-semibold text-white leading-tight">Atendimento<br/>24/7</span>
               </motion.div>
-              <div className="w-px h-8 bg-white/10 hidden sm:block"></div>
+              
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center text-center max-w-[140px]"
               >
-                <span className="text-2xl md:text-3xl font-bold text-white mb-1">100<span className="text-pro-red text-xl">%</span></span>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Garantia de Qualidade</span>
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+                  <ShieldCheck className="text-pro-red" size={20} />
+                </div>
+                <span className="text-sm font-semibold text-white leading-tight">Equipamentos<br/>Certificados</span>
               </motion.div>
-              <div className="w-px h-8 bg-white/10 hidden md:block"></div>
+              
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
-                className="flex flex-col items-center hidden md:flex"
+                className="flex flex-col items-center text-center max-w-[140px]"
               >
-                <div className="flex items-center gap-1.5 mb-1">
-                  <ShieldCheck className="text-pro-red" size={20} />
-                  <span className="text-2xl md:text-3xl font-bold text-white">24<span className="text-pro-red text-xl">/7</span></span>
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+                  <Wrench className="text-pro-red" size={20} />
                 </div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Suporte Técnico</span>
+                <span className="text-sm font-semibold text-white leading-tight">Técnicos<br/>Especializados</span>
               </motion.div>
             </motion.div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import BenefitBar from './components/BenefitBar';
 import About from './components/About';
 import Services from './components/Services';
 import HowItWorks from './components/HowItWorks';
@@ -19,7 +20,10 @@ export default function App() {
       
       <Header />
       <main className="flex-grow flex flex-col gap-16 md:gap-20 lg:gap-24 pb-16">
-        <Hero />
+        <div className="flex flex-col">
+          <Hero />
+          <BenefitBar />
+        </div>
         <About />
         <Services />
         <HowItWorks />
