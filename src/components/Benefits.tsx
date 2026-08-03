@@ -65,13 +65,17 @@ export default function Benefits() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index} 
-                  className="p-6 rounded-2xl bg-black/40 border border-white/5 hover:border-gray-200 hover:bg-gray-50 transition-colors group"
+                  className="p-4 rounded-xl bg-gray-50/80 border border-gray-100 hover:border-gray-200 hover:bg-white transition-colors group shadow-sm"
                 >
-                  <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-900 mb-4 border border-gray-200 group-hover:text-pro-red group-hover:bg-pro-red/10 group-hover:border-pro-red/20 transition-colors">
-                    {benefit.icon}
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center text-gray-900 border border-gray-200 group-hover:text-pro-red group-hover:bg-pro-red/10 group-hover:border-pro-red/20 transition-colors">
+                      {benefit.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-gray-900 mb-1 tracking-tight">{benefit.title}</h4>
+                      <p className="text-gray-600 leading-relaxed font-light text-xs">{benefit.description}</p>
+                    </div>
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{benefit.title}</h4>
-                  <p className="text-gray-600 leading-relaxed font-light text-[13px]">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
