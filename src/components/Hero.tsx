@@ -1,81 +1,121 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ArrowRight, ChevronRight, ShieldCheck } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ArrowRight, ChevronRight, ShieldCheck, Flame } from 'lucide-react';
+
+const bgImages = [
+  "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1533722285514-419b4e3395c1?auto=format&fit=crop&q=80&w=2000"
+];
 
 export default function Hero() {
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % bgImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-24 flex items-center overflow-hidden z-10 min-h-[90vh]">
-      <div className="absolute inset-0 bg-white z-0"></div>
+    <section id="home" className="relative pt-40 md:pt-48 pb-20 flex items-center justify-center overflow-hidden z-10 min-h-screen">
+      
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={bgIndex}
+            src={bgImages[bgIndex]}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.95, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-pro-black/40 via-pro-black/70 to-pro-black"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Content */}
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start text-left max-w-xl"
+            className="flex flex-col items-center w-full"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pro-red/10 text-[10px] sm:text-xs font-bold mb-6 uppercase tracking-widest text-pro-red">
-              PRO EXTINTORES
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-white/10 text-[10px] sm:text-xs font-semibold mb-6 uppercase tracking-widest text-gray-300">
+              <span className="flex h-2 w-2 relative mr-1">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pro-red opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-pro-red"></span>
+              </span>
+              Líder em Segurança e Prevenção
+              <ChevronRight size={12} className="text-gray-500 ml-1" />
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading leading-[1.1] mb-6 text-gray-900 tracking-tight">
-              Segurança que protege o que realmente importa.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading leading-[1.05] mb-6 text-white tracking-tight">
+              Prevenção que <br className="hidden md:block"/> salva <span className="text-transparent bg-clip-text bg-gradient-to-r from-pro-red to-orange-400">vidas e património.</span>
             </h1>
             
-            <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed font-light">
-              Soluções completas em segurança contra incêndios e segurança eletrónica para empresas, residências e grandes projetos.
+            <p className="text-base md:text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed font-light">
+              Soluções completas em segurança contra incêndios e segurança eletrónica para empresas, residências e grandes projetos em Moçambique.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10">
-              <a href="#contact" className="flex justify-center items-center gap-2 btn-primary px-6 py-3 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-pro-red/30 transition-all group">
-                Solicitar Orçamento
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+              <a href="#contact" className="flex justify-center items-center gap-2 btn-primary px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-pro-red/30 transition-all group">
+                Pedir Orçamento
                 <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#services" className="flex justify-center items-center gap-2 btn-outline hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-gray-900 w-full sm:w-auto text-sm group border-gray-300">
-                Nossos Serviços
-                <ChevronRight size={16} className="text-gray-500 group-hover:text-gray-900 transition-colors" />
+              <a href="#services" className="flex justify-center items-center gap-2 btn-outline hover:bg-white/5 px-5 py-2.5 rounded-lg font-semibold text-white w-full sm:w-auto text-sm group bg-white/[0.02]">
+                Ver Serviços
+                <ChevronRight size={16} className="text-gray-400 group-hover:text-white transition-colors" />
               </a>
             </div>
 
             <motion.div 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium text-gray-700"
+              className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12 pt-8 border-t border-white/5 w-full md:max-w-3xl"
             >
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="text-pro-red" size={18} />
-                <span>Atendimento 24/7</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="text-pro-red" size={18} />
-                <span>Equipamentos Certificados</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="text-pro-red" size={18} />
-                <span>Técnicos Especializados</span>
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-col items-center"
+              >
+                <div className="flex items-center gap-1.5 mb-1">
+                  <Flame className="text-pro-red" size={20} />
+                  <span className="text-2xl md:text-3xl font-bold text-white">+5<span className="text-pro-red text-xl">k</span></span>
+                </div>
+                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold flex items-center gap-1">Extintores Instalados</span>
+              </motion.div>
+              <div className="w-px h-8 bg-white/10 hidden sm:block"></div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="flex flex-col items-center"
+              >
+                <span className="text-2xl md:text-3xl font-bold text-white mb-1">100<span className="text-pro-red text-xl">%</span></span>
+                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Garantia de Qualidade</span>
+              </motion.div>
+              <div className="w-px h-8 bg-white/10 hidden md:block"></div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                className="flex flex-col items-center hidden md:flex"
+              >
+                <div className="flex items-center gap-1.5 mb-1">
+                  <ShieldCheck className="text-pro-red" size={20} />
+                  <span className="text-2xl md:text-3xl font-bold text-white">24<span className="text-pro-red text-xl">/7</span></span>
+                </div>
+                <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Suporte Técnico</span>
+              </motion.div>
             </motion.div>
-          </motion.div>
 
-          {/* Right Content */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative lg:h-[600px] flex items-center justify-center"
-          >
-            <div className="absolute inset-0 bg-pro-red/5 rounded-3xl -rotate-3 scale-105 transform origin-center"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=1000" 
-              alt="Técnico com extintor" 
-              className="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl border border-gray-200"
-            />
           </motion.div>
-          
         </div>
       </div>
     </section>

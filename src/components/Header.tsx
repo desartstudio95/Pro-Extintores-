@@ -17,7 +17,6 @@ export default function Header() {
     { name: 'Início', href: '#home' },
     { name: 'Sobre Nós', href: '#about' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Produtos', href: '#products' },
     { name: 'Contactos', href: '#contact' },
   ];
 
@@ -38,7 +37,7 @@ export default function Header() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pro-red to-pro-dark flex items-center justify-center text-white shadow-lg shadow-pro-red/20">
               <Flame size={20} />
             </div>
-            <span className="text-xl font-bold font-heading tracking-tight text-gray-900">
+            <span className="text-xl font-bold font-heading tracking-tight text-white">
               PRO EXTINTORES<span className="text-pro-red">.</span>
             </span>
           </div>
@@ -49,7 +48,7 @@ export default function Header() {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors tracking-wide"
+                className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide"
               >
                 {link.name}
               </a>
@@ -58,13 +57,13 @@ export default function Header() {
               href="#contact"
               className="flex items-center gap-2 btn-primary px-5 py-2 rounded-lg font-medium text-xs text-white shadow-md shadow-pro-red/10"
             >
-              Solicitar Orçamento
+              Pedir Orçamento
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-900 w-10 h-10 flex items-center justify-center rounded-full bg-gray-900/5 border border-gray-900/10"
+            className="md:hidden text-white w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -80,19 +79,19 @@ export default function Header() {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="py-3 px-4 text-gray-900 font-medium text-lg rounded-xl hover:bg-gray-900/5 transition-colors"
+                className="py-3 px-4 text-white font-medium text-lg rounded-xl hover:bg-white/5 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-4 mt-2 border-t border-gray-900/10">
+            <div className="pt-4 mt-2 border-t border-white/10">
               <a
                 href="#contact"
                 className="flex justify-center items-center gap-2 btn-primary text-white w-full py-3.5 rounded-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Solicitar Orçamento
+                Pedir Orçamento
               </a>
             </div>
           </div>
