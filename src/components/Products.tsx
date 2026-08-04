@@ -44,41 +44,49 @@ export default function Products() {
 
   const products = [
     {
+      id: "extintores",
       name: "Extintores",
       description: "Extintores de pó químico, CO2 e água para todos os tipos de fogo.",
       image: "https://i.ibb.co/7JxnZDV9/Chat-GPT-Image-4-de-ago-de-2026-21-02-31-1.png"
     },
     {
+      id: "mangueiras",
       name: "Mangueiras",
       description: "Mangueiras de alta pressão com certificação internacional.",
       image: "https://i.ibb.co/MDRWqV9x/Chat-GPT-Image-4-de-ago-de-2026-21-12-55.png"
     },
     {
+      id: "detectores",
       name: "Detectores",
       description: "Detectores de fumo e calor com tecnologia de precisão.",
       image: "https://i.ibb.co/380TLwt/Chat-GPT-Image-4-de-ago-de-2026-21-15-30.png"
     },
     {
+      id: "alarmes",
       name: "Alarmes",
       description: "Sistemas de alarme sonoro e visual para evacuação rápida.",
       image: "https://i.ibb.co/b95M058/Chat-GPT-Image-4-de-ago-de-2026-21-17-04.png"
     },
     {
+      id: "sprinklers",
       name: "Sprinklers",
       description: "Sistemas automáticos de supressão de chamas para tetos.",
       image: "https://i.ibb.co/tT5by5Gd/Chat-GPT-Image-4-de-ago-de-2026-22-04-28.png"
     },
     {
+      id: "equipamentos-epi",
       name: "Equipamentos EPI",
       description: "Capacetes, luvas e proteção térmica resistente ao fogo.",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600"
     },
     {
+      id: "bocas-de-incendio",
       name: "Bocas de Incêndio",
       description: "Sistemas completos de bocas de incêndio (carretéis).",
       image: "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600"
     },
     {
+      id: "sinalizacao",
       name: "Sinalização",
       description: "Placas fotoluminescentes para indicação de saídas.",
       image: "https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600"
@@ -152,7 +160,7 @@ export default function Products() {
                   <h4 className="text-lg md:text-xl font-bold text-white tracking-tight mb-2">{product.name}</h4>
                   <p className="text-white/80 text-xs md:text-sm font-light mb-4 line-clamp-2">{product.description}</p>
                   
-                  <Link to="/#contact" className="inline-flex items-center gap-2 text-white font-semibold text-xs md:text-sm hover:text-pro-red transition-colors w-max group/btn">
+                  <Link to={`/produtos/${product.id}`} className="inline-flex items-center gap-2 text-white font-semibold text-xs md:text-sm hover:text-pro-red transition-colors w-max group/btn">
                     Ver produto
                     <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                   </Link>

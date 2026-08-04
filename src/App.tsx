@@ -7,6 +7,7 @@ import ScrollToHash from './components/ScrollToHash';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import SimulatorPage from './pages/SimulatorPage';
+import ProductPage from './pages/ProductPage';
 import CookieBanner from './components/CookieBanner';
 import WelcomeModal from './components/WelcomeModal';
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sobre-nos" element={<AboutPage />} />
           <Route path="/simulador" element={<SimulatorPage />} />
+          <Route path="/produtos/:id" element={<ProductPage />} />
         </Routes>
         
         <Footer />
