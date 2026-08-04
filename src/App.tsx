@@ -6,6 +6,8 @@ import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToHash from './components/ScrollToHash';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
+import CookieBanner from './components/CookieBanner';
+import WelcomeModal from './components/WelcomeModal';
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
         
         <Footer />
         <WhatsAppButton />
+        <CookieBanner />
+        <WelcomeModal />
       </div>
     </Router>
   );
