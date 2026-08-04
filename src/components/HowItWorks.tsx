@@ -51,9 +51,9 @@ export default function HowItWorks() {
               key={index} 
               className="relative group flex flex-col items-center text-center"
             >
-              <div className="bg-pro-red inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.2)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
+              <div className="bg-gradient-to-br from-pro-red to-red-900 inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.3)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
                 {/* Index Number Background */}
-                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-pro-red text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10 border-2 border-white">{index + 1}</span>
+                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-gradient-to-br from-pro-red to-red-900 text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10 border-2 border-white">{index + 1}</span>
                 <div className="text-white relative z-10 scale-100">
                   {step.icon}
                 </div>
