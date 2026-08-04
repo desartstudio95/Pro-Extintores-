@@ -48,14 +48,14 @@ export default function FAQ() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               key={index}
-              className={`glass-card rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 ${openIndex === index ? 'bg-gray-100 border-gray-300' : 'bg-transparent hover:bg-white/[0.03]'}`}
+              className={`rounded-2xl border transition-all duration-300 ${openIndex === index ? 'bg-white border-gray-200 shadow-md' : 'bg-gray-50 border-transparent hover:bg-gray-100'}`}
             >
               <button
                 className="w-full px-5 md:px-6 py-4 md:py-5 text-left flex justify-between items-center bg-transparent gap-4"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-bold text-base text-gray-900 pr-4 leading-tight">{faq.question}</span>
-                <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === index ? 'bg-pro-red text-gray-900 shadow-lg shadow-pro-red/20' : 'bg-gray-50 text-slate-900 group-hover:bg-gray-100'}`}>
+                <span className="font-semibold text-base text-gray-900 pr-4 leading-tight">{faq.question}</span>
+                <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === index ? 'bg-pro-red text-white shadow-lg shadow-pro-red/20' : 'bg-white border border-gray-200 text-slate-900'}`}>
                   {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                 </span>
               </button>
@@ -70,7 +70,7 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 md:px-6 pb-5">
-                      <p className="text-slate-900 text-sm leading-relaxed font-light pt-3 border-t border-white/5">
+                      <p className="text-slate-900 text-sm leading-relaxed font-light pt-3 border-t border-gray-100">
                         {faq.answer}
                       </p>
                     </div>

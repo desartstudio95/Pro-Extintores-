@@ -6,22 +6,22 @@ const benefits = [
   {
     icon: <ShieldCheck size={28} className="text-white" />,
     title: "Qualidade Garantida",
-    description: "Equipamentos de alta qualidade e certificados."
+    description: "Equipamentos certificados."
   },
   {
     icon: <Wrench size={28} className="text-white" />,
     title: "Assistência Técnica",
-    description: "Manutenção e suporte sempre que precisar."
+    description: "Manutenção e suporte total."
   },
   {
     icon: <FileCheck size={28} className="text-white" />,
     title: "Conformidade Legal",
-    description: "Cumprimos todas as normas e regulamentos."
+    description: "De acordo com as normas."
   },
   {
     icon: <Zap size={28} className="text-white" />,
     title: "Ação Rápida",
-    description: "Atendimento personalizado e ágil."
+    description: "Atendimento sempre ágil."
   }
 ];
 
@@ -32,9 +32,9 @@ export default function BenefitBar() {
         <img 
           src="https://images.unsplash.com/photo-1629731238914-996ff423363f?q=80&w=2070&auto=format&fit=crop" 
           alt="Extintores" 
-          className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity"
         />
-        <div className="absolute inset-0 bg-slate-900/80 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-slate-900/70 mix-blend-multiply"></div>
         
         <div className="relative z-10 p-6 md:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

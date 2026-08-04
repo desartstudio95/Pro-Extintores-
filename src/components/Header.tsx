@@ -30,7 +30,7 @@ export default function Header() {
       <div className={`transition-all duration-500 w-full max-w-7xl mx-auto px-6 ${isScrolled ? 'md:px-4' : 'px-6'}`}>
         <div className={`flex justify-between items-center transition-all duration-500 ${
           isScrolled 
-            ? 'bg-white border border-gray-100 shadow-sm rounded-full px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]' 
+            ? 'bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_8px_32px_rgba(0,0,0,0.06)] rounded-full px-6 py-3' 
             : 'bg-transparent py-2'
         }`}>
           {/* Logo */}

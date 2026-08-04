@@ -64,55 +64,55 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="flex items-center">
-              <div className="w-full bg-[#050505]/60 p-6 md:p-8 rounded-[1.5rem] border border-white/5 shadow-2xl">
-                <h4 className="text-xl font-bold font-heading text-gray-900 mb-6 tracking-tight">Envie-nos uma mensagem</h4>
+              <div className="w-full bg-gradient-to-br from-pro-red to-red-900 p-6 md:p-8 rounded-[1.5rem] shadow-[0_20px_40px_-15px_rgba(229,57,53,0.5)] border border-red-500/30">
+                <h4 className="text-xl font-bold font-heading text-white mb-6 tracking-tight">Envie-nos uma mensagem</h4>
                 
                 <form className="space-y-5">
                   <div>
-                    <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Nome Completo</label>
+                    <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Nome Completo</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                       placeholder="Ex: Ana Cossa"
                     />
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Telemóvel</label>
+                      <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Telemóvel</label>
                       <input 
                         type="tel" 
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                         placeholder="+258 8..."
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Email (Opcional)</label>
+                      <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Email (Opcional)</label>
                       <input 
                         type="email" 
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all placeholder-gray-600 text-gray-900 text-sm"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                         placeholder="seu@email.com"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-[10px] font-semibold text-slate-900 mb-1.5 uppercase tracking-wider">Assunto</label>
+                    <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Assunto</label>
                     <div className="relative">
-                      <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pro-red focus:border-transparent transition-all appearance-none cursor-pointer text-gray-900 text-sm">
-                        <option className="bg-[#050505] text-gray-900">Pedido de Orçamento</option>
-                        <option className="bg-[#050505] text-gray-900">Agendar Avaliação</option>
-                        <option className="bg-[#050505] text-gray-900">Dúvidas e Informações</option>
+                      <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all appearance-none cursor-pointer text-white text-sm">
+                        <option className="bg-slate-900 text-white">Pedido de Orçamento</option>
+                        <option className="bg-slate-900 text-white">Agendar Avaliação</option>
+                        <option className="bg-slate-900 text-white">Dúvidas e Informações</option>
                       </select>
                       <div className="absolute top-1/2 right-4 -translate-y-1/2 pointer-events-none">
-                        <svg className="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                       </div>
                     </div>
                   </div>
 
                   <button 
                     type="button" 
-                    className="w-full btn-primary text-gray-900 py-3 rounded-lg font-medium text-sm transition-transform flex items-center justify-center gap-2 mt-2 shadow-lg"
+                    className="w-full bg-white text-pro-red hover:bg-gray-50 py-3 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 mt-4 shadow-lg active:scale-[0.98]"
                   >
                     Enviar Mensagem
                     <Send size={16} />

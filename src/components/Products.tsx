@@ -45,33 +45,42 @@ export default function Products() {
   const products = [
     {
       name: "Extintores",
-      image: "https://i.ibb.co/0R9hdfpx/EXTABF6-FA.jpg"
+      description: "Extintores de pó químico, CO2 e água para todos os tipos de fogo.",
+      image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=600"
+    },
     {
       name: "Mangueiras",
-      image: "https://www.motopompe-incendie.com/wp-content/uploads/2025/04/Flexible-rond-refoulement-incendie-DN25-PS-15-bar.png"
+      description: "Mangueiras de alta pressão com certificação internacional.",
+      image: "https://images.unsplash.com/photo-1621287955562-b9138ce316a3?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Detectores",
+      description: "Detectores de fumo e calor com tecnologia de precisão.",
       image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Alarmes",
+      description: "Sistemas de alarme sonoro e visual para evacuação rápida.",
       image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Sprinklers",
+      description: "Sistemas automáticos de supressão de chamas para tetos.",
       image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Equipamentos EPI",
+      description: "Capacetes, luvas e proteção térmica resistente ao fogo.",
       image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Bocas de Incêndio",
+      description: "Sistemas completos de bocas de incêndio (carretéis).",
       image: "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600"
     },
     {
       name: "Sinalização",
+      description: "Placas fotoluminescentes para indicação de saídas.",
       image: "https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600"
     }
   ];
@@ -116,37 +125,47 @@ export default function Products() {
             className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4"
           >
             {products.map((product, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[140px] md:w-[170px] shrink-0 snap-start"
+                className="group relative rounded-xl overflow-hidden aspect-[3/4] bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[240px] md:w-[280px] shrink-0 snap-start flex flex-col"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 
                 {/* Disponível Badge */}
-                <div className="absolute top-2 right-2 z-20">
-                  <div className="flex items-center gap-1 bg-pro-red/90 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-1 rounded-full shadow-lg">
-                    <CheckCircle2 size={10} />
+                <div className="absolute top-3 right-3 z-20">
+                  <div className="flex items-center gap-1 bg-pro-red/90 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg">
+                    <CheckCircle2 size={12} />
                     <span>Disponível</span>
                   </div>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 z-20">
-                  <h4 className="text-sm md:text-base font-bold text-white tracking-tight leading-tight">{product.name}</h4>
+                <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 z-20 flex flex-col">
+                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight mb-2">{product.name}</h4>
+                  <p className="text-white/80 text-xs md:text-sm font-light mb-4 line-clamp-2">{product.description}</p>
+                  
+                  <Link to="/#contact" className="inline-flex items-center gap-2 text-white font-semibold text-xs md:text-sm hover:text-pro-red transition-colors w-max group/btn">
+                    Ver produto
+                    <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
         
         <div className="mt-8 flex justify-center">
-          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-100 text-gray-900 border border-gray-300 px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors">
-            Ver todos os produtos
-            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
+            Ver catálogo completo
+            <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />
             </div>
           </Link>
