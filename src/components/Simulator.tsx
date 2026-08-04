@@ -136,7 +136,7 @@ export default function Simulator() {
                     </div>
                   </div>
                   
-                  <Link to="/#contact" className="w-full sm:w-auto bg-slate-900 text-white hover:bg-slate-800 px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg">
+                  <Link to="/#contact" className="w-full sm:w-auto bg-slate-900 text-white hover:bg-pro-red px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg">
                     <FileText size={16} />
                     Pedir Orçamento
                   </Link>

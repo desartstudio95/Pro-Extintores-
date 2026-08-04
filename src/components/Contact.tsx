@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative z-10 scroll-mt-24 pt-10">
+    <section id="contact" className="relative z-10 scroll-mt-24 pt-4">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-pro-red/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6">
         
@@ -25,7 +25,7 @@ export default function Contact() {
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading mb-5 tracking-tight leading-[1.1] text-gray-900">
                 Estamos aqui <span className="text-slate-900">para si.</span>
               </h3>
-              <p className="text-slate-900 text-base mb-10 max-w-md font-light leading-relaxed">
+              <p className="text-slate-900 text-base mb-6 max-w-md font-light leading-relaxed">
                 A nossa equipa técnica está pronta para avaliar as suas necessidades e fornecer a melhor solução em segurança.
               </p>
 

@@ -81,7 +81,7 @@ export default function WelcomeModal() {
                   <Link 
                     to="/#contact"
                     onClick={closeModal}
-                    className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-pro-red to-red-800 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-pro-red/20 hover:shadow-xl hover:shadow-pro-red/30 transition-all active:scale-[0.98] group"
+                    className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-pro-red to-red-800 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-pro-red/20 hover:shadow-xl hover:shadow-blue-900/30 hover:from-blue-900 hover:to-blue-950 transition-all active:scale-[0.98] group"
                   >
                     Falar com um Especialista
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

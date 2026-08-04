@@ -10,7 +10,7 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <main className="flex-grow flex flex-col gap-10 md:gap-14 lg:gap-16 pb-16">
+    <main className="flex-grow flex flex-col gap-8 md:gap-10 lg:gap-12 pb-10">
       <div className="flex flex-col">
         <Hero />
         <BenefitBar />

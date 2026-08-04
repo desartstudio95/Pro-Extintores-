@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative flex flex-col justify-center items-center overflow-hidden z-10 min-h-[100svh] pt-24 pb-20 md:pt-28 md:pb-28 lg:pt-32 lg:pb-40">
+    <section id="home" className="relative flex flex-col justify-center items-center overflow-hidden z-10 min-h-[80svh] pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24">
       
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="popLayout">
@@ -58,12 +58,12 @@ export default function Hero() {
               Prevenção que <br className="hidden md:block"/> salva <span>vidas e património.</span>
             </h1>
             
-            <p className="text-base md:text-lg text-white mb-10 max-w-2xl leading-relaxed font-light">
+            <p className="text-base md:text-lg text-white mb-6 max-w-2xl leading-relaxed font-light">
               Soluções completas em segurança contra incêndios e segurança eletrónica para empresas, residências e grandes projetos em Moçambique.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-              <Link to="/#contact" className="flex justify-center items-center gap-2 btn-primary px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-pro-red/30 transition-all group">
+              <Link to="/#contact" className="flex justify-center items-center gap-2 btn-primary px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-pro-red/20 text-white w-full sm:w-auto text-sm hover:shadow-xl hover:shadow-blue-900/30 transition-all group">
                 Pedir Orçamento
                 <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -77,7 +77,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="mt-16 flex flex-wrap items-start justify-center gap-6 sm:gap-10 md:gap-16 pt-8 border-t border-white/5 w-full md:max-w-4xl"
+              className="mt-10 flex flex-wrap items-start justify-center gap-6 sm:gap-10 md:gap-16 pt-6 border-t border-white/5 w-full md:max-w-4xl"
             >
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}

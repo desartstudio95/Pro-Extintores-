@@ -28,9 +28,9 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative z-10 scroll-mt-24 pt-10">
+    <section id="services" className="relative z-10 scroll-mt-24 pt-4">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col mb-10 items-center text-center">
+        <div className="flex flex-col mb-6 items-center text-center">
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center justify-center gap-3">
             <span className="w-6 h-[1px] bg-pro-red"></span> Nossos Serviços <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
@@ -73,7 +73,7 @@ export default function Services() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors text-sm">
+          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-full font-bold hover:bg-pro-red transition-colors text-sm">
             Ver todos os serviços
             <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />

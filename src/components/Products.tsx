@@ -86,7 +86,7 @@ export default function Products() {
   ];
 
   return (
-    <section id="products" className="relative z-10 scroll-mt-24 pt-10">
+    <section id="products" className="relative z-10 scroll-mt-24 pt-4">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-4">
           <div>
@@ -163,7 +163,7 @@ export default function Products() {
         </div>
         
         <div className="mt-8 flex justify-center">
-          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors shadow-lg">
+          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-lg">
             Ver catálogo completo
             <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />

@@ -55,7 +55,7 @@ export default function CookieBanner() {
               </button>
               <button
                 onClick={acceptCookies}
-                className="flex-1 md:flex-none bg-gradient-to-r from-pro-red to-red-700 hover:from-red-600 hover:to-red-800 px-6 py-2.5 rounded-lg font-bold text-sm text-white shadow-lg shadow-pro-red/20 transition-all active:scale-95"
+                className="flex-1 md:flex-none bg-gradient-to-r from-pro-red to-red-700 hover:from-blue-900 hover:to-blue-950 hover:shadow-blue-900/30 px-6 py-2.5 rounded-lg font-bold text-sm text-white shadow-lg shadow-pro-red/20 transition-all active:scale-95"
               >
                 Aceitar Todos
               </button>
