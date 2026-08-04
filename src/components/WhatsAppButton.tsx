@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
         className="flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd5b] text-gray-900 px-5 py-3.5 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1"
       >
         <MessageCircle size={28} />
-        <span className="font-semibold hidden sm:block">Solicitar Crédito</span>
+        <span className="font-semibold hidden sm:block">Conversar</span>
       </a>
     </motion.div>
   );

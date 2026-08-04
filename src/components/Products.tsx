@@ -66,7 +66,7 @@ export default function Products() {
     {
       name: "Sprinklers",
       description: "Sistemas automáticos de supressão de chamas para tetos.",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/tT5by5Gd/Chat-GPT-Image-4-de-ago-de-2026-22-04-28.png"
     },
     {
       name: "Equipamentos EPI",
