@@ -51,7 +51,7 @@ export default function Products() {
     {
       name: "Mangueiras",
       description: "Mangueiras de alta pressão com certificação internacional.",
-      image: "https://i.ibb.co/b95M058/Chat-GPT-Image-4-de-ago-de-2026-21-17-04.png"
+      image: "https://i.ibb.co/MDRWqV9x/Chat-GPT-Image-4-de-ago-de-2026-21-12-55.png"
     },
     {
       name: "Detectores",

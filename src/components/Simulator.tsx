@@ -61,7 +61,7 @@ export default function Simulator() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="bg-white p-6 md:p-8 rounded-[1.5rem] border border-gray-100 space-y-8 shadow-xl">
+              <motion.div layout className="bg-white p-6 md:p-8 rounded-[1.5rem] border border-gray-100 space-y-8 shadow-xl">
                 
                 {/* Area Slider */}
                 <div className="space-y-4">
@@ -119,34 +119,50 @@ export default function Simulator() {
                 </div>
 
                 {/* Results Card */}
-                <div className="bg-gray-50 rounded-[1rem] p-5 border border-gray-200 flex flex-col sm:flex-row gap-5 justify-between sm:items-center mt-4">
-                  <div>
+                <motion.div 
+                  layout
+                  className="bg-gray-50 rounded-[1rem] p-5 border border-gray-200 flex flex-col sm:flex-row gap-5 justify-between sm:items-center mt-4"
+                >
+                  <motion.div layout>
                     <div className="text-[10px] text-gray-500 mb-1 tracking-wider uppercase font-semibold">Quantidade Estimada</div>
-                    <div className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight flex items-center gap-3">
+                    <motion.div 
+                      key={results.extinguishers}
+                      initial={{ scale: 1.1, color: '#ef4444', opacity: 0.8 }}
+                      animate={{ scale: 1, color: '#111827', opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight flex items-center gap-3"
+                    >
                       {results.extinguishers} <span className="text-sm font-medium text-gray-500 mt-2">Extintores</span>
-                    </div>
+                    </motion.div>
                     
-                    <div className="mt-3 text-[10px] text-gray-600">
+                    <motion.div layout className="mt-3 text-[10px] text-gray-600">
                       <span className="font-semibold block mb-1">Recomendações extras:</span>
                       <ul className="list-disc pl-4 space-y-0.5">
                         {results.extras.map((extra, idx) => (
-                          <li key={idx}>{extra}</li>
+                          <motion.li 
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.1, duration: 0.3 }}
+                            key={extra}
+                          >
+                            {extra}
+                          </motion.li>
                         ))}
                       </ul>
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                   
-                  <Link to="/#contact" className="w-full sm:w-auto bg-slate-900 text-white hover:bg-pro-red px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg">
+                  <Link to="/#contact" className="w-full sm:w-auto bg-slate-900 text-white hover:bg-pro-red px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg hover:shadow-xl hover:-translate-y-1">
                     <FileText size={16} />
                     Pedir Orçamento
                   </Link>
-                </div>
+                </motion.div>
                 
                 <p className="text-[9px] text-gray-400 text-center leading-relaxed">
                   *Esta é apenas uma estimativa baseada em regras gerais. Uma avaliação técnica rigorosa e presencial é obrigatória por lei para um projeto contra incêndios.
                 </p>
 
-              </div>
+              </motion.div>
             </div>
             
           </div>
