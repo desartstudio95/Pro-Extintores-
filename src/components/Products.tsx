@@ -46,22 +46,22 @@ export default function Products() {
     {
       name: "Extintores",
       description: "Extintores de pó químico, CO2 e água para todos os tipos de fogo.",
-      image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/7JxnZDV9/Chat-GPT-Image-4-de-ago-de-2026-21-02-31-1.png"
     },
     {
       name: "Mangueiras",
       description: "Mangueiras de alta pressão com certificação internacional.",
-      image: "https://images.unsplash.com/photo-1621287955562-b9138ce316a3?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/b95M058/Chat-GPT-Image-4-de-ago-de-2026-21-17-04.png"
     },
     {
       name: "Detectores",
       description: "Detectores de fumo e calor com tecnologia de precisão.",
-      image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/380TLwt/Chat-GPT-Image-4-de-ago-de-2026-21-15-30.png"
     },
     {
       name: "Alarmes",
       description: "Sistemas de alarme sonoro e visual para evacuação rápida.",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/b95M058/Chat-GPT-Image-4-de-ago-de-2026-21-17-04.png"
     },
     {
       name: "Sprinklers",
