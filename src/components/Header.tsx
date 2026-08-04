@@ -55,10 +55,10 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              to="/#contact"
+              to="/simulador"
               className="flex items-center gap-2 btn-primary px-5 py-2 rounded-lg font-medium text-xs text-white shadow-md shadow-pro-red/10"
             >
-              Pedir Orçamento
+              Simulador de Segurança
             </Link>
           </nav>
 
@@ -88,11 +88,11 @@ export default function Header() {
             ))}
             <div className="pt-4 mt-2 border-t border-gray-200">
               <Link
-                to="/#contact"
+                to="/simulador"
                 className="flex justify-center items-center gap-2 btn-primary text-white w-full py-3.5 rounded-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pedir Orçamento
+                Simulador de Segurança
               </Link>
             </div>
           </div>

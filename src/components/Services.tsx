@@ -6,22 +6,22 @@ import { Link } from 'react-router-dom';
 export default function Services() {
   const services = [
     {
-      image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=600",
+      image: "https://i.ibb.co/GfFh5TGF/Chat-GPT-Image-4-de-ago-de-2026-16-40-10.png",
       title: "Extintores e Redes",
       description: "Fornecimento, revisão e recarga de extintores (Pó ABC, CO2, H2O). Mangueiras, hidrantes, carretéis e mantas de incêndio.",
     },
     {
-      image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=600",
+      image: "https://i.ibb.co/RkVHSqqQ/Chat-GPT-Image-4-de-ago-de-2026-16-42-34.png",
       title: "Detecção e Prevenção",
       description: "Instalação de Sistemas de Detecção e Alarme de Incêndios. Assessoria especializada em medidas de prevenção e combate.",
     },
     {
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=600",
+      image: "https://i.ibb.co/MxJ23pjv/Chat-GPT-Image-4-de-ago-de-2026-16-44-42.png",
       title: "Segurança Electrónica",
       description: "Instalação de câmeras de vigilância, sistemas de intrusão, vedações eléctricas e serviços de automação de portões.",
     },
     {
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600",
+      image: "https://i.ibb.co/j9mrkGw4/Chat-GPT-Image-4-de-ago-de-2026-16-47-29.png",
       title: "Protecção e Sinalização",
       description: "Equipamentos de Protecção Individual (EPI), KITs de primeiros socorros, sirenes, alarmes de emergência e sinalização.",
     }
