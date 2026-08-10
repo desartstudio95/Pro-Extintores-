@@ -26,6 +26,11 @@ export default function ManutencaoPage() {
               <li>Ensaios e testes operacionais a Redes de Incêndio (bombas e carretéis).</li>
               <li>Auditorias de segurança para verificação de conformidade.</li>
             </ul>
+            <div className="pt-8">
+              <Link to="/#products" className="inline-flex items-center justify-center gap-2 bg-pro-red text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform w-full sm:w-auto">
+                Ver Todos os Produtos
+              </Link>
+            </div>
           </div>
         </div>
       </div>

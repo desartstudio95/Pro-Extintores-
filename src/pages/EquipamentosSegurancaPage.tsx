@@ -26,6 +26,11 @@ export default function EquipamentosSegurancaPage() {
               <li>Armários e suportes para equipamentos de emergência.</li>
               <li>Uniformes e fardamentos técnicos de segurança.</li>
             </ul>
+            <div className="pt-8">
+              <Link to="/produtos/equipamentos-epi" className="inline-flex items-center justify-center gap-2 bg-pro-red text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform w-full sm:w-auto">
+                Ver Produtos (EPIs)
+              </Link>
+            </div>
           </div>
         </div>
       </div>

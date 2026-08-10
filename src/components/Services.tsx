@@ -7,23 +7,27 @@ export default function Services() {
   const services = [
     {
       image: "https://i.ibb.co/GfFh5TGF/Chat-GPT-Image-4-de-ago-de-2026-16-40-10.png",
-      title: "Extintores e Redes",
+      title: "Segurança Contra Incêndios",
       description: "Fornecimento, revisão e recarga de extintores (Pó ABC, CO2, H2O). Mangueiras, hidrantes, carretéis e mantas de incêndio.",
-    },
-    {
-      image: "https://i.ibb.co/RkVHSqqQ/Chat-GPT-Image-4-de-ago-de-2026-16-42-34.png",
-      title: "Detecção e Prevenção",
-      description: "Instalação de Sistemas de Detecção e Alarme de Incêndios. Assessoria especializada em medidas de prevenção e combate.",
+      href: "/seguranca-contra-incendios"
     },
     {
       image: "https://i.ibb.co/MxJ23pjv/Chat-GPT-Image-4-de-ago-de-2026-16-44-42.png",
-      title: "Segurança Electrónica",
+      title: "Segurança Eletrónica",
       description: "Instalação de câmeras de vigilância, sistemas de intrusão, vedações eléctricas e serviços de automação de portões.",
+      href: "/seguranca-eletronica"
     },
     {
       image: "https://i.ibb.co/j9mrkGw4/Chat-GPT-Image-4-de-ago-de-2026-16-47-29.png",
-      title: "Protecção e Sinalização",
+      title: "Equipamentos de Segurança",
       description: "Equipamentos de Protecção Individual (EPI), KITs de primeiros socorros, sirenes, alarmes de emergência e sinalização.",
+      href: "/equipamentos-seguranca"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop",
+      title: "Manutenção",
+      description: "Manutenção e revisão de equipamentos, sistemas de detecção e alarme de incêndios, e testes operacionais.",
+      href: "/manutencao"
     }
   ];
 
@@ -63,7 +67,7 @@ export default function Services() {
                 <h4 className="text-sm font-bold text-gray-900 mb-1.5 tracking-tight">{service.title}</h4>
                 <p className="text-slate-900 leading-relaxed font-light text-[11px] mb-4 flex-grow">{service.description}</p>
                 
-                <Link to="/contactos" className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
+                <Link to={service.href} className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
                   Saiba mais
                   <ArrowRight size={12} />
                 </Link>

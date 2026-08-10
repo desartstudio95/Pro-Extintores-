@@ -26,6 +26,11 @@ export default function SegurancaEletronicaPage() {
               <li>Vedações Elétricas de alta segurança.</li>
               <li>Serviços de automação de portões e portas de garagem.</li>
             </ul>
+            <div className="pt-8">
+              <Link to="/#products" className="inline-flex items-center justify-center gap-2 bg-pro-red text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform w-full sm:w-auto">
+                Ver Produtos (Alarmes)
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -26,6 +26,11 @@ export default function SegurancaContraIncendiosPage() {
               <li>Sinalização de emergência fotoluminescente.</li>
               <li>Assessoria técnica especializada em medidas de prevenção.</li>
             </ul>
+            <div className="pt-8">
+              <Link to="/produtos/extintores" className="inline-flex items-center justify-center gap-2 bg-pro-red text-white px-8 py-4 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform w-full sm:w-auto">
+                Ver Produtos (Extintores)
+              </Link>
+            </div>
           </div>
         </div>
       </div>
