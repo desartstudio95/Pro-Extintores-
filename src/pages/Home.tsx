@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks';
 import Benefits from '../components/Benefits';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
+import Clients from '../components/Clients';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Products />
       <HowItWorks />
       <Benefits />
+      <Clients />
       <FAQ />
       <Contact />
     </main>

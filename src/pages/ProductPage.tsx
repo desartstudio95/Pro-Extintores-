@@ -75,41 +75,41 @@ const allProducts = {
     name: 'Equipamentos EPI',
     description: 'Capacetes, luvas e proteção térmica resistente ao fogo.',
     fullDescription: 'Equipamentos de Proteção Individual desenhados para salvaguardar a integridade física de equipas de intervenção e trabalhadores. Fornecemos fatos ignífugos, capacetes, botas de segurança, luvas e aparelhos respiratórios de alta qualidade.',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600',
+    image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png',
     features: ['Materiais Ignífugos Certificados', 'Conforto e Ergonomia', 'Proteção Térmica Extrema', 'Acessórios de Alta Visibilidade'],
     items: [
-      { name: 'Capacete de Bombeiro com Viseira', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600', specs: ['Norma: EN443', 'Viseira: Anti-risco'] },
-      { name: 'Fato de Intervenção Ignífugo', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600', specs: ['Material: Nomex', 'Faixas Refletoras'] },
-      { name: 'Luvas de Proteção Térmica', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600', specs: ['Resistência: Corte e Calor', 'Kevlar/Couro'] },
-      { name: 'Botas de Combate a Incêndios', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600', specs: ['Biqueira: Aço', 'Anti-perfuração'] },
-      { name: 'Aparelho Respiratório (ARICA)', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600', specs: ['Pressão: 300 bar', 'Autonomia: 45 min'] }
+      { name: 'Capacete de Bombeiro com Viseira', image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png', specs: ['Norma: EN443', 'Viseira: Anti-risco'] },
+      { name: 'Fato de Intervenção Ignífugo', image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png', specs: ['Material: Nomex', 'Faixas Refletoras'] },
+      { name: 'Luvas de Proteção Térmica', image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png', specs: ['Resistência: Corte e Calor', 'Kevlar/Couro'] },
+      { name: 'Botas de Combate a Incêndios', image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png', specs: ['Biqueira: Aço', 'Anti-perfuração'] },
+      { name: 'Aparelho Respiratório (ARICA)', image: 'https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png', specs: ['Pressão: 300 bar', 'Autonomia: 45 min'] }
     ]
   },
   'bocas-de-incendio': {
     name: 'Bocas de Incêndio',
     description: 'Sistemas completos de bocas de incêndio (carretéis).',
     fullDescription: 'Redes de Incêndio Armadas (RIA), vulgarmente conhecidas como bocas de incêndio ou carretéis. Permitem uma intervenção imediata e contínua com água, sendo um equipamento de primeira intervenção fundamental em qualquer edifício.',
-    image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600',
+    image: 'https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png',
     features: ['Mangueira Semi-Rígida', 'Agulheta Regulável', 'Armário Robusto', 'Pronto a Usar'],
     items: [
-      { name: 'Carretel de Incêndio Giratório', image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600', specs: ['Diâmetro: 25mm', 'Comprimento: 25m'] },
-      { name: 'Agulheta Regulável 3 posições', image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600', specs: ['Modos: Jato/Nevoeiro/Fechado', 'Material: Latão'] },
-      { name: 'Armário para Carretel', image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600', specs: ['Chapa de Aço', 'Cor: Vermelho RAL 3000'] },
-      { name: 'Válvula de Cunha', image: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600', specs: ['Rosca: 1"', 'Material: Latão'] }
+      { name: 'Carretel de Incêndio Giratório', image: 'https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png', specs: ['Diâmetro: 25mm', 'Comprimento: 25m'] },
+      { name: 'Agulheta Regulável 3 posições', image: 'https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png', specs: ['Modos: Jato/Nevoeiro/Fechado', 'Material: Latão'] },
+      { name: 'Armário para Carretel', image: 'https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png', specs: ['Chapa de Aço', 'Cor: Vermelho RAL 3000'] },
+      { name: 'Válvula de Cunha', image: 'https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png', specs: ['Rosca: 1"', 'Material: Latão'] }
     ]
   },
   'sinalizacao': {
     name: 'Sinalização',
     description: 'Placas fotoluminescentes para indicação de saídas.',
     fullDescription: 'Sinalização de segurança fotoluminescente que garante a visibilidade de rotas de fuga, saídas de emergência e localização de equipamentos de combate a incêndio, mesmo em situações de falha total de energia elétrica.',
-    image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600',
+    image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png',
     features: ['Alta Fotoluminescência', 'Materiais Resistentes', 'Conformidade Legal', 'Diversos Formatos e Tamanhos'],
     items: [
-      { name: 'Placa Saída (Esq/Dir)', image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600', specs: ['Tamanho: 300x150mm', 'Fotoluminescente'] },
-      { name: 'Placa Extintor', image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600', specs: ['Tamanho: 200x200mm', 'Símbolo Normalizado'] },
-      { name: 'Placa Boca de Incêndio', image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600', specs: ['Tamanho: 200x200mm', 'Visibilidade Alta'] },
-      { name: 'Placa Botoneira', image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600', specs: ['Tamanho: 150x150mm', 'Fotoluminescente'] },
-      { name: 'Plano de Evacuação', image: 'https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600', specs: ['Formato: A3/A4', 'PVC Rígido'] }
+      { name: 'Placa Saída (Esq/Dir)', image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png', specs: ['Tamanho: 300x150mm', 'Fotoluminescente'] },
+      { name: 'Placa Extintor', image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png', specs: ['Tamanho: 200x200mm', 'Símbolo Normalizado'] },
+      { name: 'Placa Boca de Incêndio', image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png', specs: ['Tamanho: 200x200mm', 'Visibilidade Alta'] },
+      { name: 'Placa Botoneira', image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png', specs: ['Tamanho: 150x150mm', 'Fotoluminescente'] },
+      { name: 'Plano de Evacuação', image: 'https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png', specs: ['Formato: A3/A4', 'PVC Rígido'] }
     ]
   }
 };

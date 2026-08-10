@@ -36,7 +36,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base mb-1 text-gray-900 tracking-tight">Escritório Central</h4>
-                    <p className="text-slate-900 text-sm font-light leading-relaxed">Maputo<br/>Moçambique</p>
+                    <p className="text-slate-900 text-sm font-light leading-relaxed">Av. de Moçambique, Bairro Luís Cabral N°169<br/>Maputo, Moçambique</p>
                   </div>
                 </div>
                 
@@ -46,7 +46,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-base mb-1 text-gray-900 tracking-tight">Linhas de Apoio</h4>
-                    <p className="text-slate-900 text-sm font-light leading-relaxed">+258 87 790 4074<br/>+258 87 310 4074</p>
+                    <p className="text-slate-900 text-sm font-light leading-relaxed">+258 85 5240453</p>
                   </div>
                 </div>
 

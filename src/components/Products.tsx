@@ -77,19 +77,19 @@ export default function Products() {
       id: "equipamentos-epi",
       name: "Equipamentos EPI",
       description: "Capacetes, luvas e proteção térmica resistente ao fogo.",
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png"
     },
     {
       id: "bocas-de-incendio",
       name: "Bocas de Incêndio",
       description: "Sistemas completos de bocas de incêndio (carretéis).",
-      image: "https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png"
     },
     {
       id: "sinalizacao",
       name: "Sinalização",
       description: "Placas fotoluminescentes para indicação de saídas.",
-      image: "https://images.unsplash.com/photo-1585834851259-26d1c876e5d8?auto=format&fit=crop&q=80&w=600"
+      image: "https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png"
     }
   ];
 

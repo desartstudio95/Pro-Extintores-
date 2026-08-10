@@ -1,0 +1,64 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { Building2, Store, GraduationCap, Hotel, Car, Fuel, Landmark, Factory, Building } from 'lucide-react';
+
+export default function Clients() {
+  const clients = [
+    { name: 'Shangong Taikai Power Engeneering', icon: <Factory size={24} /> },
+    { name: 'Safira Ceramic', icon: <Building size={24} /> },
+    { name: 'China Mall', icon: <Store size={24} /> },
+    { name: 'Colegio Peron', icon: <GraduationCap size={24} /> },
+    { name: 'Utia Hotel', icon: <Hotel size={24} /> },
+    { name: 'Bomba Nova Ponte', icon: <Fuel size={24} /> },
+    { name: 'Transportes Jose Leubrax', icon: <Car size={24} /> },
+    { name: 'Bombas Exito', icon: <Fuel size={24} /> },
+    { name: 'Instituto Nacional de Acção Social', icon: <Landmark size={24} /> },
+  ];
+
+  return (
+    <section className="py-20 bg-gray-50 border-y border-gray-200">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 inline-flex items-center gap-2">
+            <span className="w-4 h-[1px] bg-pro-red"></span>
+            A Nossa Experiência
+            <span className="w-4 h-[1px] bg-pro-red"></span>
+          </h2>
+          <h3 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 tracking-tight">
+            Quem confia na <span className="text-pro-red">Pro Extintores</span>
+          </h3>
+          <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
+            Temos o orgulho de proteger o património e as vidas de diversas empresas e instituições de renome em Moçambique.
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden w-full">
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
+          
+          <motion.div 
+            className="flex gap-4 md:gap-6 w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 25,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+          >
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="w-48 md:w-64 shrink-0 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-pro-red/30 transition-all hover:-translate-y-1"
+              >
+                <div className="w-14 h-14 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center mb-4 transition-colors">
+                  {client.icon}
+                </div>
+                <h4 className="font-bold text-gray-900 text-sm md:text-base">{client.name}</h4>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}

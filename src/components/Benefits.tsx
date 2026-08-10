@@ -52,7 +52,7 @@ export default function Benefits() {
             {/* Centro: Imagem da equipa técnica */}
             <div className="lg:col-span-4 rounded-2xl overflow-hidden min-h-[300px] lg:min-h-full relative shadow-inner">
               <img 
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
+                src="https://i.ibb.co/twRK3KPH/Chat-GPT-Image-10-de-ago-de-2026-13-55-12.png" 
                 alt="Equipa Técnica" 
                 className="absolute inset-0 w-full h-full object-cover filter brightness-[0.95]"
               />

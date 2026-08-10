@@ -63,7 +63,7 @@ export default function Services() {
                 <h4 className="text-sm font-bold text-gray-900 mb-1.5 tracking-tight">{service.title}</h4>
                 <p className="text-slate-900 leading-relaxed font-light text-[11px] mb-4 flex-grow">{service.description}</p>
                 
-                <Link to="/#contact" className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
+                <Link to="/contactos" className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
                   Saiba mais
                   <ArrowRight size={12} />
                 </Link>
@@ -73,7 +73,7 @@ export default function Services() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-full font-bold hover:bg-pro-red transition-colors text-sm">
+          <Link to="/contactos" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-5 py-3 rounded-full font-bold hover:bg-pro-red transition-colors text-sm">
             Ver todos os serviços
             <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />

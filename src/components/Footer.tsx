@@ -38,33 +38,37 @@ export default function Footer() {
             <h4 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Empresa</h4>
             <ul className="space-y-4 font-light text-sm">
               <li><Link to="/sobre-nos" className="text-slate-900 hover:text-pro-red transition-colors">Sobre Nós</Link></li>
-              <li><Link to="/#contact" className="text-slate-900 hover:text-pro-red transition-colors">Contactos</Link></li>
-              <li><Link to="/#faq" className="text-slate-900 hover:text-pro-red transition-colors">Suporte</Link></li>
+              <li><Link to="/contactos" className="text-slate-900 hover:text-pro-red transition-colors">Contactos</Link></li>
+              <li><Link to="/suporte" className="text-slate-900 hover:text-pro-red transition-colors">Suporte</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Serviços</h4>
             <ul className="space-y-4 font-light text-sm">
-              <li><Link to="/#services" className="text-slate-900 hover:text-pro-red transition-colors">Segurança Contra Incêndios</Link></li>
-              <li><Link to="/#services" className="text-slate-900 hover:text-pro-red transition-colors">Segurança Eletrónica</Link></li>
-              <li><Link to="/#services" className="text-slate-900 hover:text-pro-red transition-colors">Equipamentos de Segurança</Link></li>
-              <li><Link to="/#services" className="text-slate-900 hover:text-pro-red transition-colors">Manutenção</Link></li>
+              <li><Link to="/seguranca-contra-incendios" className="text-slate-900 hover:text-pro-red transition-colors">Segurança Contra Incêndios</Link></li>
+              <li><Link to="/seguranca-eletronica" className="text-slate-900 hover:text-pro-red transition-colors">Segurança Eletrónica</Link></li>
+              <li><Link to="/equipamentos-seguranca" className="text-slate-900 hover:text-pro-red transition-colors">Equipamentos de Segurança</Link></li>
+              <li><Link to="/manutencao" className="text-slate-900 hover:text-pro-red transition-colors">Manutenção</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Legal</h4>
             <ul className="space-y-4 font-light text-sm">
-              <li><a href="#" className="text-slate-900 hover:text-gray-900 transition-colors">Termos de Serviço</a></li>
-              <li><a href="#" className="text-slate-900 hover:text-gray-900 transition-colors">Política de Privacidade</a></li>
+              <li><Link to="/termos-de-servico" className="text-slate-900 hover:text-gray-900 transition-colors">Termos de Serviço</Link></li>
+              <li><Link to="/politica-de-privacidade" className="text-slate-900 hover:text-gray-900 transition-colors">Política de Privacidade</Link></li>
             </ul>
           </div>
 
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-900 font-light">
-          <p>© {new Date().getFullYear()} Pro Extintores e Servicos LTDA. Todos os direitos reservados.</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
+            <p>© {new Date().getFullYear()} Pro Extintores e Servicos LTDA. Todos os direitos reservados.</p>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <p className="font-semibold text-gray-600">NUIT - 401006761</p>
+          </div>
           <p className="flex items-center gap-2">
             Desenhado em <span className="text-gray-900">Maputo</span> <span className="text-pro-red">♥</span>
           </p>

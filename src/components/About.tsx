@@ -57,7 +57,7 @@ export default function About() {
                   <h4 className="text-xl font-bold text-gray-900 tracking-tight">Missão</h4>
                 </div>
                 <p className="text-slate-900 text-sm font-light leading-relaxed">
-                  Fornecer equipamentos, materiais e serviços de instalação de elevada qualidade técnica e fiabilidade, garantindo a satisfação e proteção total dos nossos clientes.
+                  Contribuir para a obtenção e manutenção da qualidade de vida dos clientes e colaboradores, consolidar-se como uma das principais empresas do nosso segmento, garantindo aos nossos funcionários a oportunidade de crescimento profissional, estimulando a qualificação e desenvolvimento.
                 </p>
               </motion.div>
               
@@ -75,7 +75,7 @@ export default function About() {
                   <h4 className="text-xl font-bold text-gray-900 tracking-tight">Visão</h4>
                 </div>
                 <p className="text-slate-900 text-sm font-light leading-relaxed">
-                  Ser a empresa líder e de referência nacional no segmento de Segurança Contra Incêndios e Segurança Eletrónica até 2030, inovando continuamente as nossas soluções.
+                  Reconhecimento dos nossos clientes pela eficiência, sigilo e referência no mercado, demonstrando o nosso diferencial em atendimento, agilidade, qualidade e credibilidade dos nossos serviços.
                 </p>
               </motion.div>
               
