@@ -58,7 +58,7 @@ export default function HowItWorks() {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">0{index + 1} &mdash; {step.title}</h4>
-                <p className="text-slate-900 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
+                <p className="text-slate-900 leading-relaxed font-light text-[13px] max-w-[220px] mx-auto">{step.description}</p>
               </div>
             </motion.div>
           ))}

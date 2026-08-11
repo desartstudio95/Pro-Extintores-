@@ -70,8 +70,7 @@ export default function Contact() {
                 <form className="space-y-5">
                   <div>
                     <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Nome Completo</label>
-                    <input 
-                      type="text" 
+                    <input id="contact-name" type="text" 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                       placeholder="Ex: Ana Cossa"
                     />
@@ -80,16 +79,14 @@ export default function Contact() {
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Telemóvel</label>
-                      <input 
-                        type="tel" 
+                      <input id="contact-phone" type="tel" 
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                         placeholder="+258 8..."
                       />
                     </div>
                     <div>
                       <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Email (Opcional)</label>
-                      <input 
-                        type="email" 
+                      <input id="contact-email" type="email" 
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all placeholder-white/40 text-white text-sm"
                         placeholder="seu@email.com"
                       />
@@ -101,7 +98,7 @@ export default function Contact() {
                     <div>
                       <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">Tipo de cliente</label>
                       <div className="relative">
-                        <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all appearance-none cursor-pointer text-white text-sm">
+                        <select id="contact-type" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all appearance-none cursor-pointer text-white text-sm">
                           <option className="bg-slate-900 text-white">Empresa</option>
                           <option className="bg-slate-900 text-white">Residência</option>
                           <option className="bg-slate-900 text-white">Obra/Projeto</option>
@@ -116,7 +113,7 @@ export default function Contact() {
                     <div>
                       <label className="block text-[10px] font-semibold text-white/80 mb-1.5 uppercase tracking-wider">O que procura?</label>
                       <div className="relative">
-                        <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all appearance-none cursor-pointer text-white text-sm">
+                        <select id="contact-interest" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all appearance-none cursor-pointer text-white text-sm">
                           <option className="bg-slate-900 text-white">Extintores</option>
                           <option className="bg-slate-900 text-white">Manutenção</option>
                           <option className="bg-slate-900 text-white">Carretéis/Bocas de Incêndio</option>
@@ -134,10 +131,22 @@ export default function Contact() {
                   </div>
 
 
+                  
                   <button 
                     type="button" 
+                    onClick={() => {
+                      const name = document.getElementById('contact-name').value;
+                      const phone = document.getElementById('contact-phone').value;
+                      const email = document.getElementById('contact-email').value;
+                      const type = document.getElementById('contact-type').value;
+                      const interest = document.getElementById('contact-interest').value;
+                      
+                      const text = `Olá, gostaria de enviar uma mensagem.\n\nNome: ${name}\nTelemóvel: ${phone}\nEmail: ${email}\nTipo de cliente: ${type}\nProcura: ${interest}`;
+                      window.open(`https://wa.me/258855240453?text=${encodeURIComponent(text)}`, '_blank');
+                    }}
                     className="w-full bg-white text-pro-red hover:bg-gray-50 py-3 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 mt-4 shadow-lg active:scale-[0.98]"
                   >
+
                     Enviar Mensagem
                     <Send size={16} />
                   </button>

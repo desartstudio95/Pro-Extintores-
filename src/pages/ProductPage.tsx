@@ -100,13 +100,10 @@ export default function ProductPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-100">
-                <Link 
-                  to="/#contact" 
-                  className="flex-1 bg-gradient-to-r from-pro-red to-red-800 text-white hover:from-blue-900 hover:to-blue-950 px-6 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-pro-red/20 hover:shadow-blue-900/30"
-                >
+                <a href={`https://wa.me/258855240453?text=${encodeURIComponent('Olá, gostaria de pedir um orçamento para ' + product.name + '.')}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-pro-red to-red-800 text-white hover:from-blue-900 hover:to-blue-950 px-6 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-pro-red/20 hover:shadow-blue-900/30">
                   <FileText size={18} />
                   Pedir Orçamento
-                </Link>
+                </a>
                 <Link 
                   to="/#products" 
                   className="px-6 py-4 rounded-xl font-bold text-sm text-gray-600 border border-gray-200 hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
@@ -117,20 +114,6 @@ export default function ProductPage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </div>
-
-      
-      {/* Banner Top */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 mb-8">
-        <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <div>
-            <h4 className="font-bold text-gray-900 text-lg">Não sabe qual equipamento precisa?</h4>
-            <p className="text-slate-600 text-sm mt-1">Os nossos especialistas ajudam a escolher a solução certa.</p>
-          </div>
-          <Link to="/contactos" className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-600 transition-colors shrink-0">
-            Falar com um técnico
-          </Link>
         </div>
       </div>
 
@@ -194,12 +177,9 @@ export default function ProductPage() {
                     </div>
                   )}
                   
-                  <Link 
-                    to="/#contact" 
-                    className="mt-auto w-full inline-flex items-center justify-center gap-1.5 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-lg hover:bg-pro-red transition-colors shadow-md hover:shadow-xl hover:-translate-y-0.5 transform"
-                  >
+                  <a href={`https://wa.me/258855240453?text=${encodeURIComponent('Olá, gostaria de solicitar uma cotação para ' + item.name + '.')}`} target="_blank" rel="noopener noreferrer" className="mt-auto w-full inline-flex items-center justify-center gap-1.5 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-2 rounded-lg hover:bg-pro-red transition-colors shadow-md hover:shadow-xl hover:-translate-y-0.5 transform">
                     Solicitar Cotação
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -215,9 +195,9 @@ export default function ProductPage() {
             <h4 className="font-bold text-white text-xl md:text-2xl">Pronto para proteger o seu espaço?</h4>
             <p className="text-white/80 text-sm md:text-base mt-2">Peça uma avaliação gratuita e garanta a sua segurança.</p>
           </div>
-          <Link to="/contactos" className="inline-flex items-center gap-2 bg-white text-pro-red px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shrink-0 shadow-sm">
+          <a href={`https://wa.me/258855240453?text=${encodeURIComponent('Olá, gostaria de solicitar uma avaliação para ' + product.name + '.')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white text-pro-red px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shrink-0 shadow-sm">
             Solicitar avaliação
-          </Link>
+          </a>
         </div>
       </div>
 
