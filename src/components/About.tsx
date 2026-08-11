@@ -20,7 +20,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="bg-white border border-gray-100 shadow-sm p-8 md:p-14 lg:p-20 rounded-[2rem] md:rounded-[2.5rem] border border-gray-200 relative overflow-hidden"
         >
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
             <div>
               <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
                 <span className="w-6 h-[1px] bg-pro-red"></span> Sobre Nós

@@ -40,7 +40,7 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-4 gap-6 lg:gap-8 relative">
           {/* Connector Line */}
-          <div className="hidden md:block absolute top-[4rem] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent -z-10"></div>
+          
 
           {steps.map((step, index) => (
             <motion.div 
@@ -51,13 +51,16 @@ export default function HowItWorks() {
               key={index} 
               className="relative group flex flex-col items-center text-center"
             >
-              <div className="bg-gradient-to-br from-pro-red to-red-900 inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.3)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
-                <div className="text-white relative z-10 scale-100">
-                  {step.icon}
+              <div className="flex items-center justify-center gap-4 mb-5 relative z-10">
+                <span className="text-5xl font-black text-gray-100 group-hover:text-pro-red/20 transition-colors tracking-tighter">0{index + 1}</span>
+                <div className="bg-gradient-to-br from-pro-red to-red-900 inline-flex items-center justify-center w-20 h-20 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.3)] group-hover:scale-105 transition-all duration-500">
+                  <div className="text-white relative z-10 scale-100">
+                    {step.icon}
+                  </div>
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">0{index + 1} &mdash; {step.title}</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{step.title}</h4>
                 <p className="text-slate-900 leading-relaxed font-light text-[13px] max-w-[220px] mx-auto">{step.description}</p>
               </div>
             </motion.div>

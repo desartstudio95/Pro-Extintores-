@@ -91,7 +91,7 @@ export default function Products() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="group relative rounded-xl overflow-hidden aspect-[3/4] bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[240px] md:w-[280px] shrink-0 snap-start flex flex-col"
+                className="group relative rounded-xl overflow-hidden aspect-square bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[200px] md:w-[240px] shrink-0 snap-start flex flex-col"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
                 <img 

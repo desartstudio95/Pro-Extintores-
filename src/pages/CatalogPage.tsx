@@ -10,7 +10,7 @@ export default function CatalogPage() {
   }, []);
 
   return (
-    <main className="flex-grow pt-32 pb-20 bg-gray-50 min-h-screen">
+    <main className="flex-grow pt-24 pb-12 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-pro-red font-semibold hover:underline mb-8">
           <ArrowLeft size={16} /> Voltar à página inicial
@@ -33,7 +33,7 @@ export default function CatalogPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index} 
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-all duration-300 relative flex flex-col h-[320px]"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-all duration-300 relative flex flex-col aspect-square h-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
               <img 
@@ -62,7 +62,7 @@ export default function CatalogPage() {
         </div>
 
         {/* Banner */}
-        <div className="mt-16 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="mt-10 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h4 className="font-bold text-gray-900 text-xl">Não sabe qual equipamento precisa?</h4>
             <p className="text-slate-600 mt-2">Os nossos especialistas ajudam a escolher a solução certa para o seu caso.</p>

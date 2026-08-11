@@ -16,9 +16,9 @@ export default function Clients() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 border-y border-gray-200">
+    <section className="py-12 bg-gray-50 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 inline-flex items-center gap-2">
             <span className="w-4 h-[1px] bg-pro-red"></span>
             Segurança não é apenas o que fazemos. É aquilo que comprovamos.
@@ -48,9 +48,9 @@ export default function Clients() {
                 className="w-48 md:w-64 shrink-0 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-pro-red/30 transition-all hover:-translate-y-1"
               >
                 
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center mb-4 transition-colors overflow-hidden p-1 shadow-sm border border-gray-100">
+                <div className="h-16 md:h-20 flex items-center justify-center mb-4 text-slate-400 w-full">
                   {client.image ? (
-                    <img src={client.image} alt={client.name} className="w-full h-full object-contain rounded-full" />
+                    <img src={client.image} alt={client.name} className="w-full h-full object-contain" />
                   ) : (
                     client.icon
                   )}

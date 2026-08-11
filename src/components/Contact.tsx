@@ -15,7 +15,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="bg-white border border-gray-100 shadow-sm p-6 md:p-10 lg:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-gray-200 relative overflow-hidden"
         >
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 relative z-10">
             
             {/* Contact Info */}
             <div>

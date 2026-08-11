@@ -32,9 +32,9 @@ export default function HowWeHelp() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 tracking-tight">
             Como podemos <span className="text-pro-red">ajudar?</span>
           </h2>

@@ -15,7 +15,7 @@ export default function ProductPage() {
 
   if (!product) {
     return (
-      <main className="flex-grow pt-32 pb-20 flex flex-col items-center justify-center min-h-[60vh]">
+      <main className="flex-grow pt-24 pb-12 flex flex-col items-center justify-center min-h-[60vh]">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
         <Link to="/" className="text-pro-red font-semibold hover:underline flex items-center gap-2">
           <ArrowLeft size={16} /> Voltar à página inicial
@@ -119,7 +119,7 @@ export default function ProductPage() {
 
       {/* Product List Section */}
       {product.items && product.items.length > 0 && (
-        <div className="max-w-7xl mx-auto px-6 mt-16 md:mt-24 mb-16">
+        <div className="max-w-7xl mx-auto px-6 mt-10 md:mt-24 mb-10">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 tracking-tight">
               Gama de <span className="text-pro-red">{product.name}</span>
@@ -139,7 +139,7 @@ export default function ProductPage() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="snap-start shrink-0 w-[75vw] md:w-auto bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-pro-red/30 transition-all group flex flex-col"
               >
-                <div className="aspect-[4/3] bg-gray-50 relative overflow-hidden">
+                <div className="aspect-square bg-gray-50 relative overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.name}
@@ -189,7 +189,7 @@ export default function ProductPage() {
 
       
       {/* Banner Bottom */}
-      <div className="max-w-7xl mx-auto px-6 mt-8 mb-16">
+      <div className="max-w-7xl mx-auto px-6 mt-8 mb-10">
         <div className="bg-pro-red rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-lg shadow-pro-red/20">
           <div>
             <h4 className="font-bold text-white text-xl md:text-2xl">Pronto para proteger o seu espaço?</h4>
@@ -202,7 +202,7 @@ export default function ProductPage() {
       </div>
 
       {/* Guarantees Section */}
-      <div className="bg-slate-900 py-16">
+      <div className="bg-slate-900 py-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-800">
             

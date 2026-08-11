@@ -5,7 +5,7 @@ import Clients from '../components/Clients';
 
 export default function AboutPage() {
   return (
-    <main className="flex-grow flex flex-col gap-16 md:gap-20 lg:gap-24 pb-16 pt-32">
+    <main className="flex-grow flex flex-col gap-10 md:gap-10 lg:gap-12 pb-10 pt-24">
       <About />
       <Clients />
       <Contact />
