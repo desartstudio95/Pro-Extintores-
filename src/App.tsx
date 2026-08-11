@@ -6,6 +6,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToHash from './components/ScrollToHash';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
+import CatalogPage from './pages/CatalogPage';
 import SimulatorPage from './pages/SimulatorPage';
 import ProductPage from './pages/ProductPage';
 import CookieBanner from './components/CookieBanner';
@@ -31,6 +32,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sobre-nos" element={<AboutPage />} />
+          <Route path="/catalogo" element={<CatalogPage />} />
           <Route path="/simulador" element={<SimulatorPage />} />
           <Route path="/produtos/:id" element={<ProductPage />} />
           <Route path="/politica-de-privacidade" element={<PrivacyPolicyPage />} />

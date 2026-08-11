@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { productCategories as products } from '../data/products';
 
 export default function Products() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -42,56 +43,7 @@ export default function Products() {
     }
   };
 
-  const products = [
-    {
-      id: "extintores",
-      name: "Extintores",
-      description: "Extintores de pó químico, CO2 e água para todos os tipos de fogo.",
-      image: "https://i.ibb.co/7JxnZDV9/Chat-GPT-Image-4-de-ago-de-2026-21-02-31-1.png"
-    },
-    {
-      id: "mangueiras",
-      name: "Mangueiras",
-      description: "Mangueiras de alta pressão com certificação internacional.",
-      image: "https://i.ibb.co/MDRWqV9x/Chat-GPT-Image-4-de-ago-de-2026-21-12-55.png"
-    },
-    {
-      id: "detectores",
-      name: "Detectores",
-      description: "Detectores de fumo e calor com tecnologia de precisão.",
-      image: "https://i.ibb.co/380TLwt/Chat-GPT-Image-4-de-ago-de-2026-21-15-30.png"
-    },
-    {
-      id: "alarmes",
-      name: "Alarmes",
-      description: "Sistemas de alarme sonoro e visual para evacuação rápida.",
-      image: "https://i.ibb.co/b95M058/Chat-GPT-Image-4-de-ago-de-2026-21-17-04.png"
-    },
-    {
-      id: "sprinklers",
-      name: "Sprinklers",
-      description: "Sistemas automáticos de supressão de chamas para tetos.",
-      image: "https://i.ibb.co/tT5by5Gd/Chat-GPT-Image-4-de-ago-de-2026-22-04-28.png"
-    },
-    {
-      id: "equipamentos-epi",
-      name: "Equipamentos EPI",
-      description: "Capacetes, luvas e proteção térmica resistente ao fogo.",
-      image: "https://i.ibb.co/dsL3N95t/Chat-GPT-Image-7-de-ago-de-2026-15-19-20.png"
-    },
-    {
-      id: "bocas-de-incendio",
-      name: "Bocas de Incêndio",
-      description: "Sistemas completos de bocas de incêndio (carretéis).",
-      image: "https://i.ibb.co/ycKkrJWL/Chat-GPT-Image-7-de-ago-de-2026-15-39-16.png"
-    },
-    {
-      id: "sinalizacao",
-      name: "Sinalização",
-      description: "Placas fotoluminescentes para indicação de saídas.",
-      image: "https://i.ibb.co/C3pVRt8Q/Chat-GPT-Image-7-de-ago-de-2026-15-41-25.png"
-    }
-  ];
+  
 
   return (
     <section id="products" className="relative z-10 scroll-mt-24 pt-4">
@@ -171,7 +123,7 @@ export default function Products() {
         </div>
         
         <div className="mt-8 flex justify-center">
-          <Link to="/#contact" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-lg">
+          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-lg">
             Ver catálogo completo
             <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />

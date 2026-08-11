@@ -59,7 +59,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-base md:text-lg text-white mb-6 max-w-2xl leading-relaxed font-light">
-              Soluções completas em segurança contra incêndios e segurança eletrónica para empresas, residências e grandes projetos em Moçambique.
+              Venda, instalação, manutenção e inspeção de equipamentos e sistemas de segurança contra incêndios.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">

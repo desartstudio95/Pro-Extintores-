@@ -6,23 +6,23 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: <ClipboardList size={20} />,
-      title: "Contacto Inicial",
-      description: "Entre em contacto connosco para solicitar um orçamento ou avaliação técnica."
+      title: "Fale connosco",
+      description: "Conte-nos o que precisa."
     },
     {
       icon: <Search size={20} />,
-      title: "Avaliação de Riscos",
-      description: "A nossa equipa técnica desloca-se ao local para identificar as vulnerabilidades."
+      title: "Avaliamos",
+      description: "Analisamos os riscos e necessidades."
     },
     {
       icon: <Wrench size={20} />,
-      title: "Instalação",
-      description: "Instalamos e configuramos os equipamentos com o mais alto rigor técnico."
+      title: "Apresentamos a solução",
+      description: "Receba uma proposta adequada ao seu espaço."
     },
     {
       icon: <ShieldCheck size={20} />,
-      title: "Proteção Contínua",
-      description: "Oferecemos planos de manutenção para garantir a operacionalidade dos sistemas."
+      title: "Protegemos",
+      description: "Instalação, manutenção e assistência contínua."
     }
   ];
 
@@ -52,14 +52,12 @@ export default function HowItWorks() {
               className="relative group flex flex-col items-center text-center"
             >
               <div className="bg-gradient-to-br from-pro-red to-red-900 inline-flex items-center justify-center w-24 h-24 rounded-full border-4 border-white shadow-[0_0_20px_rgba(229,57,53,0.3)] mb-6 relative z-10 group-hover:scale-105 transition-all duration-500">
-                {/* Index Number Background */}
-                <span className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-gradient-to-br from-pro-red to-red-900 text-white font-bold flex items-center justify-center text-xs shadow-lg shadow-black/10 border-2 border-white">{index + 1}</span>
                 <div className="text-white relative z-10 scale-100">
                   {step.icon}
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{step.title}</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">0{index + 1} &mdash; {step.title}</h4>
                 <p className="text-slate-900 leading-relaxed font-light text-[13px] max-w-[220px]">{step.description}</p>
               </div>
             </motion.div>

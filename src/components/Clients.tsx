@@ -21,15 +21,12 @@ export default function Clients() {
         <div className="text-center mb-16">
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 inline-flex items-center gap-2">
             <span className="w-4 h-[1px] bg-pro-red"></span>
-            A Nossa Experiência
+            Segurança não é apenas o que fazemos. É aquilo que comprovamos.
             <span className="w-4 h-[1px] bg-pro-red"></span>
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 tracking-tight">
-            Quem confia na <span className="text-pro-red">Pro Extintores</span>
+            Empresas que <span className="text-pro-red">confiam em nós</span>
           </h3>
-          <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
-            Temos o orgulho de proteger o património e as vidas de diversas empresas e instituições de renome em Moçambique.
-          </p>
         </div>
 
         <div className="relative overflow-hidden w-full">

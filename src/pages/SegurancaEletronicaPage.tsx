@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import ServiceForm from '../components/ServiceForm';
 
 export default function SegurancaEletronicaPage() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function SegurancaEletronicaPage() {
             </div>
           </div>
         </div>
+        <ServiceForm />
       </div>
     </main>
   );

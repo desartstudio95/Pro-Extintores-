@@ -5,7 +5,7 @@ import Services from '../components/Services';
 import Products from '../components/Products';
 import HowItWorks from '../components/HowItWorks';
 import Benefits from '../components/Benefits';
-import FAQ from '../components/FAQ';
+import HowWeHelp from '../components/HowWeHelp';
 import Contact from '../components/Contact';
 import Clients from '../components/Clients';
 
@@ -20,8 +20,8 @@ export default function Home() {
       <Products />
       <HowItWorks />
       <Benefits />
+      <HowWeHelp />
       <Clients />
-      <FAQ />
       <Contact />
     </main>
   );

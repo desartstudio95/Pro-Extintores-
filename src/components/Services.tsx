@@ -68,7 +68,7 @@ export default function Services() {
                 <p className="text-slate-900 leading-relaxed font-light text-[11px] mb-4 flex-grow">{service.description}</p>
                 
                 <Link to={service.href} className="inline-flex items-center gap-1.5 text-pro-red font-semibold text-xs hover:text-gray-900 transition-colors mt-auto w-max">
-                  Saiba mais
+                  Ver serviço
                   <ArrowRight size={12} />
                 </Link>
               </div>
