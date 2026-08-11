@@ -5,14 +5,14 @@ import { Building2, Store, GraduationCap, Hotel, Car, Fuel, Landmark, Factory, B
 export default function Clients() {
   const clients = [
     { name: 'Shangong Taikai Power Engeneering', icon: <Factory size={24} /> },
-    { name: 'Safira Ceramic', icon: <Building size={24} /> },
+    { name: 'Safira', image: 'https://i.ibb.co/0RRybMxM/images-2.jpg', icon: <Building size={24} /> },
     { name: 'China Mall', icon: <Store size={24} /> },
-    { name: 'Colegio Peron', icon: <GraduationCap size={24} /> },
-    { name: 'Utia Hotel', icon: <Hotel size={24} /> },
+    { name: 'Colégio Peron', image: 'https://i.ibb.co/b545zXzZ/FB-IMG-1786428201062.jpg', icon: <GraduationCap size={24} /> },
+    { name: 'Otia Hotel', image: 'https://i.ibb.co/ZRp939SK/unnamed-3.png', icon: <Hotel size={24} /> },
     { name: 'Bomba Nova Ponte', icon: <Fuel size={24} /> },
     { name: 'Transportes Jose Leubrax', icon: <Car size={24} /> },
-    { name: 'Bombas Exito', icon: <Fuel size={24} /> },
-    { name: 'Instituto Nacional de Acção Social', icon: <Landmark size={24} /> },
+    { name: 'Bombas Êxito', image: 'https://i.ibb.co/Jw0cnGX0/logo.png', icon: <Fuel size={24} /> },
+    { name: 'Instituto Nacional de Ação Social', image: 'https://i.ibb.co/gsFHn3Q/images-3.jpg', icon: <Landmark size={24} /> },
   ];
 
   return (
@@ -47,9 +47,15 @@ export default function Clients() {
                 key={index}
                 className="w-48 md:w-64 shrink-0 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center hover:shadow-xl hover:border-pro-red/30 transition-all hover:-translate-y-1"
               >
-                <div className="w-14 h-14 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center mb-4 transition-colors">
-                  {client.icon}
+                
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center mb-4 transition-colors overflow-hidden p-1 shadow-sm border border-gray-100">
+                  {client.image ? (
+                    <img src={client.image} alt={client.name} className="w-full h-full object-contain rounded-full" />
+                  ) : (
+                    client.icon
+                  )}
                 </div>
+
                 <h4 className="font-bold text-gray-900 text-sm md:text-base">{client.name}</h4>
               </div>
             ))}
