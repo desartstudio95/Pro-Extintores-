@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CallToAction from './components/CallToAction';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToHash from './components/ScrollToHash';
 import Home from './pages/Home';
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/suporte" element={<SuportePage />} />
         </Routes>
         
+        <CallToAction />
         <Footer />
         <WhatsAppButton />
         <CookieBanner />

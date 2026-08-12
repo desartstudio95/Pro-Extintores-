@@ -16,46 +16,54 @@ export default function CatalogPage() {
           <ArrowLeft size={16} /> Voltar à página inicial
         </Link>
         
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-gray-900 tracking-tight mb-4">
+        <div className="text-center mb-10">
+          <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-900 tracking-tight mb-3">
             Catálogo <span className="text-pro-red">Completo</span>
           </h1>
-          <p className="text-slate-600 max-w-2xl mx-auto text-base">
+          <p className="text-slate-600 max-w-2xl mx-auto text-sm">
             Explore a nossa gama completa de equipamentos e sistemas de segurança contra incêndios e segurança eletrónica.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
           {productCategories.map((product, index) => (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={index} 
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-all duration-300 relative flex flex-col aspect-square h-auto"
+              key={index}
+              className="bg-white rounded-[28px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-              <img 
-                src={product.image} 
-                alt={product.name}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute top-4 right-4 z-20">
-                <div className="bg-white/90 backdrop-blur text-gray-900 text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                  <span>Disponível</span>
+              <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-gray-50">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-pro-red text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md">
+                    Disponível
+                  </div>
                 </div>
               </div>
               
-              <div className="absolute inset-x-0 bottom-0 p-5 z-20 flex flex-col">
-                <h4 className="text-xl font-bold text-white tracking-tight mb-2">{product.name}</h4>
-                <p className="text-white/80 text-sm font-light mb-4 line-clamp-2">{product.description}</p>
+              <div className="p-5 flex flex-col flex-grow text-left">
+                <h4 className="text-lg font-black text-[#0a192f] mb-2 leading-tight">
+                  {product.name}
+                </h4>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-5 line-clamp-3">
+                  {product.description}
+                </p>
                 
-                <Link to={`/produtos/${product.id}`} className="inline-flex items-center gap-2 text-white font-semibold text-sm hover:text-pro-red transition-colors w-max group/btn">
-                  Ver produto
-                  <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
+                <div className="mt-auto pt-2 flex justify-center">
+                  <Link 
+                    to={`/produtos/${product.id}`} 
+                    className="inline-block px-6 w-full text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-sm py-2.5 rounded-[20px] transition-all duration-300 shadow-md"
+                  >
+                    Ver Detalhes
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
