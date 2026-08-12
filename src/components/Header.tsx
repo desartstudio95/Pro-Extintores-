@@ -36,9 +36,7 @@ export default function Header() {
         }`}>
           {/* Logo */}
           <Link to="/#home" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pro-red to-pro-dark flex items-center justify-center text-white shadow-lg shadow-pro-red/20">
-              <Flame size={20} />
-            </div>
+            <img src="https://i.ibb.co/hFc8zNDk/REAL-ESTATE-BUYING-OR-SELLING-POST-1.png" alt="Pro Extintores Logo" className="h-10 md:h-12 w-auto object-contain" />
             <span className={`text-xl font-bold font-heading tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               PRO EXTINTORES<span className="text-pro-red">.</span>
             </span>
