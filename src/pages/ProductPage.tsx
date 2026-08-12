@@ -40,16 +40,16 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 mt-6 md:mt-6">
+      <div className="max-w-md md:max-w-lg lg:max-w-xl mx-auto px-6 mt-6">
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-900/5 border border-gray-100 overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
+          <div className="flex flex-col">
             
             {/* Imagem do Produto */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative h-[200px] md:h-auto md:min-h-[350px] bg-gray-100"
+              className="relative aspect-square bg-gray-100 w-full shrink-0"
             >
               <img 
                 src={product.image} 
@@ -77,11 +77,11 @@ export default function ProductPage() {
                 <span className="text-[10px] font-bold tracking-widest uppercase">Equipamento Certificado</span>
               </div>
               
-              <h1 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 tracking-tight mb-5">
+              <h1 className="text-xl md:text-2xl font-bold font-heading text-gray-900 tracking-tight mb-3">
                 {product.name}
               </h1>
               
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light mb-5">
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-light mb-5">
                 {product.fullDescription}
               </p>
 
