@@ -1,4 +1,5 @@
-import React from 'react';
+const fs = require('fs');
+const content = `import React from 'react';
 import { Phone, ArrowRight, ShieldAlert } from 'lucide-react';
 
 export default function CallToAction() {
@@ -57,3 +58,6 @@ export default function CallToAction() {
     </section>
   );
 }
+`;
+fs.writeFileSync('src/components/CallToAction.tsx', content);
+console.log('CTA updated');

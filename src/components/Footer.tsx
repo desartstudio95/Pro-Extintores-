@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="relative text-white pt-16 pb-8 z-10 overflow-hidden bg-[#0a192f]">
+    <footer className="relative text-white pt-16 pb-8 z-10 overflow-hidden bg-black">
       {/* Imagem de Fundo Desfocada */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img 
@@ -12,7 +12,7 @@ export default function Footer() {
           alt="Footer Background" 
           className="w-full h-full object-cover blur-md opacity-40 scale-105"
         />
-        <div className="absolute inset-0 bg-[#0a192f]/85"></div>
+        <div className="absolute inset-0 bg-black/85"></div>
       </div>
 
       <div className="max-w-[90rem] mx-auto px-6 relative z-10">

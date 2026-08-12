@@ -32,7 +32,7 @@ export default function SimulatorPage() {
 
       <div className="max-w-7xl mx-auto px-6 mt-16">
         <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm flex gap-4 items-start">
-          <div className="bg-blue-50 text-blue-600 p-3 rounded-full shrink-0">
+          <div className="bg-gray-100 text-gray-800 p-3 rounded-full shrink-0">
             <Info size={24} />
           </div>
           <div>

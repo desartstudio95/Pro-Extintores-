@@ -49,7 +49,7 @@ export default function CatalogPage() {
               </div>
               
               <div className="p-5 flex flex-col flex-grow text-left">
-                <h4 className="text-lg font-black text-[#0a192f] mb-2 leading-tight">
+                <h4 className="text-lg font-black text-black mb-2 leading-tight">
                   {product.name}
                 </h4>
                 <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-5 line-clamp-3">
@@ -59,7 +59,7 @@ export default function CatalogPage() {
                 <div className="mt-auto pt-2 flex justify-center">
                   <Link 
                     to={`/produtos/${product.id}`} 
-                    className="inline-block px-6 w-full text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-sm py-2.5 rounded-[20px] transition-all duration-300 shadow-md"
+                    className="inline-block px-6 w-full text-center bg-black hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-sm py-2.5 rounded-[20px] transition-all duration-300 shadow-md"
                   >
                     Ver Detalhes
                   </Link>

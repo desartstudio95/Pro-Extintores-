@@ -101,7 +101,7 @@ export default function ProductPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-100">
-                <a href={`https://wa.me/258855240453?text=${encodeURIComponent('Olá, gostaria de pedir um orçamento para ' + product.name + '.')}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-pro-red to-red-800 text-white hover:from-blue-900 hover:to-blue-950 px-6 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-pro-red/20 hover:shadow-blue-900/30">
+                <a href={`https://wa.me/258855240453?text=${encodeURIComponent('Olá, gostaria de pedir um orçamento para ' + product.name + '.')}`} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-pro-red to-red-800 text-white hover:from-gray-900 hover:to-black px-6 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-pro-red/20 hover:shadow-black/40">
                   <FileText size={18} />
                   Pedir Orçamento
                 </a>

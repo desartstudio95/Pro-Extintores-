@@ -28,13 +28,13 @@ const benefits = [
 export default function BenefitBar() {
   return (
     <section className="relative z-20 px-4 md:px-8 max-w-7xl mx-auto w-full -mt-4 md:-mt-10 lg:-mt-16">
-      <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 to-blue-950 rounded-2xl shadow-2xl shadow-blue-900/20 border border-slate-800">
+      <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 to-black rounded-2xl shadow-2xl shadow-black/30 border border-slate-800">
         <img 
           src="https://i.ibb.co/mC5DtJ96/watermarked-7ab03fb6-fe50-4060-afd5-f841ec066b72.jpg" 
           alt="Extintores" 
           className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity blur-md scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-blue-950/70 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-black/70 mix-blend-multiply"></div>
         
         <div className="relative z-10 p-6 md:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

@@ -52,7 +52,7 @@ export default function Products() {
               <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
             </h2>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
-              Nossos <span className="text-[#0a192f]">Produtos</span>
+              Nossos <span className="text-black">Produtos</span>
             </h3>
           </div>
           <div className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function Products() {
                 </div>
                 
                 <div className="p-4 sm:p-5 flex flex-col flex-grow text-left">
-                  <h4 className="text-lg sm:text-xl font-black text-[#0a192f] mb-2 leading-tight">
+                  <h4 className="text-lg sm:text-xl font-black text-black mb-2 leading-tight">
                     {product.name}
                   </h4>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
@@ -115,7 +115,7 @@ export default function Products() {
                   <div className="mt-auto pt-2 flex justify-center">
                     <Link 
                       to={`/produtos/${product.id}`} 
-                      className="inline-block px-8 mx-auto text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-xs sm:text-sm py-2 sm:py-2.5 rounded-[24px] transition-all duration-300 shadow-md"
+                      className="inline-block px-8 mx-auto text-center bg-black hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-xs sm:text-sm py-2 sm:py-2.5 rounded-[24px] transition-all duration-300 shadow-md"
                     >
                       Ver Detalhes
                     </Link>
@@ -127,9 +127,9 @@ export default function Products() {
         </div>
 
         <div className="mt-4 flex justify-center">
-          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-[#0a192f] text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-md text-xs sm:text-sm">
+          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-md text-xs sm:text-sm">
             Ver catálogo completo
-            <div className="w-6 h-6 rounded-full bg-white text-[#0a192f] flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />
             </div>
           </Link>
