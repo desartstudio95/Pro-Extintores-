@@ -10,7 +10,7 @@ export default function Footer() {
         <img 
           src="https://i.ibb.co/mC5DtJ96/watermarked-7ab03fb6-fe50-4060-afd5-f841ec066b72.jpg" 
           alt="Footer Background" 
-          className="w-full h-full object-cover blur-md opacity-50 scale-105"
+          className="w-full h-full object-cover blur-md opacity-25 scale-105"
         />
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li><Link to="/seguranca-eletronica" className="hover:text-white hover:underline transition-colors">Segurança Eletrónica</Link></li>
               <li><Link to="/equipamentos-seguranca" className="hover:text-white hover:underline transition-colors">Equipamentos</Link></li>
               <li><Link to="/manutencao" className="hover:text-white hover:underline transition-colors">Manutenção Preventiva</Link></li>
-              <li><Link to="/simulador" className="hover:text-white hover:underline transition-colors">Simulador de Custos</Link></li>
+              <li><Link to="/simulador" className="hover:text-white hover:underline transition-colors">Simulador de Segurança</Link></li>
             </ul>
           </div>
 
