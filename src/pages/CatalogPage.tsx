@@ -75,7 +75,7 @@ export default function CatalogPage() {
             <h4 className="font-bold text-gray-900 text-xl">Não sabe qual equipamento precisa?</h4>
             <p className="text-slate-600 mt-2">Os nossos especialistas ajudam a escolher a solução certa para o seu caso.</p>
           </div>
-          <a href="https://wa.me/258841234567" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-sm shrink-0 w-full sm:w-auto">
+          <a href="https://wa.me/258855240453" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-sm shrink-0 w-full sm:w-auto">
             <MessageCircle size={18} /> Falar com um técnico
           </a>
         </div>

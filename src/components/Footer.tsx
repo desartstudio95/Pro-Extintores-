@@ -4,17 +4,24 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a192f] text-white pt-16 pb-8 relative z-10">
-      <div className="max-w-[90rem] mx-auto px-6">
+    <footer className="relative text-white pt-16 pb-8 z-10 overflow-hidden bg-[#0a192f]">
+      {/* Imagem de Fundo Desfocada */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="https://i.ibb.co/mC5DtJ96/watermarked-7ab03fb6-fe50-4060-afd5-f841ec066b72.jpg" 
+          alt="Footer Background" 
+          className="w-full h-full object-cover blur-md opacity-40 scale-105"
+        />
+        <div className="absolute inset-0 bg-[#0a192f]/85"></div>
+      </div>
+
+      <div className="max-w-[90rem] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 border-b border-white/10 pb-12 lg:divide-x divide-white/10 gap-y-10 lg:gap-y-0">
           
           {/* Coluna 1 - Empresa & Social */}
           <div className="flex flex-col lg:pr-8">
-            <Link to="/#home" className="flex items-center gap-3 mb-5">
-              <img src="https://i.ibb.co/hFc8zNDk/REAL-ESTATE-BUYING-OR-SELLING-POST-1.png" alt="Pro Extintores Logo" className="h-8 md:h-10 w-auto object-contain brightness-0 invert" />
-              <span className="text-lg font-bold font-heading tracking-tight text-white">
-                PRO EXTINTORES<span className="text-pro-red">.</span>
-              </span>
+            <Link to="/#home" className="inline-block mb-5">
+              <img src="https://i.ibb.co/hFc8zNDk/REAL-ESTATE-BUYING-OR-SELLING-POST-1.png" alt="Pro Extintores Logo" className="h-24 md:h-32 w-auto object-contain brightness-0 invert -ml-2" />
             </Link>
             <p className="text-slate-400 font-light leading-relaxed mb-6 text-xs pr-2">
               A sua parceira de confiança em Moçambique para soluções integradas de Segurança Contra Incêndios e Segurança Eletrónica.
@@ -61,10 +68,7 @@ export default function Footer() {
             <ul className="space-y-3 font-light text-xs text-slate-400">
               <li className="flex items-start gap-2.5">
                 <Phone size={14} className="text-pro-red shrink-0 mt-0.5" />
-                <div className="flex flex-col">
-                  <span>+258 84 123 4567</span>
-                  <span>+258 82 123 4567</span>
-                </div>
+                <span>+258 85 524 0453</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail size={14} className="text-pro-red shrink-0 mt-0.5" />
@@ -72,7 +76,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin size={14} className="text-pro-red shrink-0 mt-0.5" />
-                <span>Av. de Moçambique, Km 5<br/>Maputo, Moçambique</span>
+                <span>Av. de Moçambique, Bairro Luís Cabral N°169<br/>Maputo, Moçambique</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock size={14} className="text-pro-red shrink-0 mt-0.5" />

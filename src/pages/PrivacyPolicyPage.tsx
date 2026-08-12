@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-3">6. Contactos</h2>
               <p>
-                Se tiver alguma dúvida sobre esta Política de Privacidade, pode contactar-nos através do escritório central em Maputo, ou pelas nossas linhas de apoio: +258 85 5240453.
+                Se tiver alguma dúvida sobre esta Política de Privacidade, pode contactar-nos através do escritório central em Maputo, ou pelas nossas linhas de apoio: +258 85 524 0453.
               </p>
             </section>
             

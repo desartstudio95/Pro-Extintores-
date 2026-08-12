@@ -18,7 +18,7 @@ export default function ServiceForm() {
           <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
             <h4 className="font-bold text-gray-900 mb-4">Prefere falar diretamente?</h4>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://wa.me/258841234567" target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-sm">
+              <a href="https://wa.me/258855240453" target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-sm">
                 <MessageCircle size={18} /> WhatsApp
               </a>
               <a href="tel:+258855240453" className="flex-1 inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-gray-800 transition-colors shadow-sm">
