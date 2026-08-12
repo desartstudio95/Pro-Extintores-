@@ -40,7 +40,7 @@ export default function ProductPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-6 md:mt-6">
+      <div className="max-w-5xl mx-auto px-6 mt-6 md:mt-6">
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-900/5 border border-gray-100 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
             
@@ -49,7 +49,7 @@ export default function ProductPage() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative h-[250px] md:h-full bg-gray-100"
+              className="relative h-[200px] md:h-auto md:min-h-[350px] bg-gray-100"
             >
               <img 
                 src={product.image} 
@@ -70,22 +70,22 @@ export default function ProductPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-6 md:p-10 flex flex-col justify-center"
+              className="p-6 md:p-8 flex flex-col justify-center"
             >
               <div className="inline-flex items-center gap-2 text-pro-red mb-4 bg-pro-red/10 px-3 py-1.5 rounded-full border border-pro-red/20 w-max">
                 <ShieldCheck size={16} />
                 <span className="text-[10px] font-bold tracking-widest uppercase">Equipamento Certificado</span>
               </div>
               
-              <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-900 tracking-tight mb-6">
+              <h1 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 tracking-tight mb-5">
                 {product.name}
               </h1>
               
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light mb-6">
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light mb-5">
                 {product.fullDescription}
               </p>
 
-              <div className="mb-6">
+              <div className="mb-5">
                 <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Principais Características</h4>
                 <ul className="space-y-3">
                   {product.features.map((feature, idx) => (
@@ -119,8 +119,8 @@ export default function ProductPage() {
 
       {/* Product List Section */}
       {product.items && product.items.length > 0 && (
-        <div className="max-w-7xl mx-auto px-6 mt-6 md:mt-24 mb-6">
-          <div className="text-center mb-6">
+        <div className="max-w-7xl mx-auto px-6 mt-6 md:mt-24 mb-5">
+          <div className="text-center mb-5">
             <h2 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 tracking-tight">
               Gama de <span className="text-pro-red">{product.name}</span>
             </h2>
@@ -189,7 +189,7 @@ export default function ProductPage() {
 
       
       {/* Banner Bottom */}
-      <div className="max-w-7xl mx-auto px-6 mt-8 mb-6">
+      <div className="max-w-7xl mx-auto px-6 mt-8 mb-5">
         <div className="bg-pro-red rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-lg shadow-pro-red/20">
           <div>
             <h4 className="font-bold text-white text-xl md:text-2xl">Pronto para proteger o seu espaço?</h4>

@@ -89,9 +89,9 @@ export default function Products() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="shrink-0 snap-start w-[240px] sm:w-[280px] bg-white rounded-[32px] md:rounded-[36px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
+                className="shrink-0 snap-start w-[220px] sm:w-[250px] bg-white rounded-[32px] md:rounded-[36px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
               >
-                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-gray-50">
+                <div className="relative h-40 sm:h-44 w-full overflow-hidden bg-gray-50">
                   <img 
                     src={product.image} 
                     alt={product.name} 
@@ -104,18 +104,18 @@ export default function Products() {
                   </div>
                 </div>
                 
-                <div className="p-6 sm:p-8 flex flex-col flex-grow text-left">
-                  <h4 className="text-xl sm:text-[22px] font-black text-[#0a192f] mb-3 leading-tight">
+                <div className="p-4 sm:p-5 flex flex-col flex-grow text-left">
+                  <h4 className="text-lg sm:text-xl font-black text-[#0a192f] mb-2 leading-tight">
                     {product.name}
                   </h4>
-                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 line-clamp-3">
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
                     {product.description}
                   </p>
                   
                   <div className="mt-auto pt-2 flex justify-center">
                     <Link 
                       to={`/produtos/${product.id}`} 
-                      className="inline-block px-8 mx-auto text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-sm sm:text-base py-2.5 sm:py-3 rounded-[24px] transition-all duration-300 shadow-md"
+                      className="inline-block px-8 mx-auto text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-xs sm:text-sm py-2 sm:py-2.5 rounded-[24px] transition-all duration-300 shadow-md"
                     >
                       Ver Detalhes
                     </Link>
@@ -127,7 +127,7 @@ export default function Products() {
         </div>
 
         <div className="mt-4 flex justify-center">
-          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-[#0a192f] text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-md text-sm sm:text-base">
+          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-[#0a192f] text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-md text-xs sm:text-sm">
             Ver catálogo completo
             <div className="w-6 h-6 rounded-full bg-white text-[#0a192f] flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />
