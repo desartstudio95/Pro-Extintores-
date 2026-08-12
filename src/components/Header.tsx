@@ -55,7 +55,7 @@ export default function Header() {
             ))}
             <Link
               to="/simulador"
-              className="flex items-center gap-2 bg-pro-red hover:bg-black transition-colors duration-300 px-5 py-2 rounded-lg font-medium text-xs text-white shadow-md shadow-pro-red/10"
+              className="flex items-center gap-2 btn-primary px-5 py-2 rounded-lg font-medium text-xs text-white shadow-md shadow-pro-red/10"
             >
               Simulador de Segurança
             </Link>
@@ -88,7 +88,7 @@ export default function Header() {
             <div className="pt-4 mt-2 border-t border-gray-200">
               <Link
                 to="/simulador"
-                className="flex justify-center items-center gap-2 bg-pro-red hover:bg-black transition-colors duration-300 text-white w-full py-3.5 rounded-lg font-medium"
+                className="flex justify-center items-center gap-2 btn-primary text-white w-full py-3.5 rounded-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Simulador de Segurança

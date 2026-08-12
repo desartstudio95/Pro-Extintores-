@@ -32,7 +32,7 @@ export default function BenefitBar() {
         <img 
           src="https://i.ibb.co/mC5DtJ96/watermarked-7ab03fb6-fe50-4060-afd5-f841ec066b72.jpg" 
           alt="Extintores" 
-          className="absolute inset-0 w-full h-full object-cover opacity-90 blur-md scale-110"
+          className="absolute inset-0 w-full h-full object-cover opacity-90 blur-[2px] scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 to-black/70"></div>
         
