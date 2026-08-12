@@ -10,9 +10,9 @@ export default function Footer() {
         <img 
           src="https://i.ibb.co/mC5DtJ96/watermarked-7ab03fb6-fe50-4060-afd5-f841ec066b72.jpg" 
           alt="Footer Background" 
-          className="w-full h-full object-cover blur-md opacity-40 scale-105"
+          className="w-full h-full object-cover blur-md opacity-75 scale-105"
         />
-        <div className="absolute inset-0 bg-black/85"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       <div className="max-w-[90rem] mx-auto px-6 relative z-10">
