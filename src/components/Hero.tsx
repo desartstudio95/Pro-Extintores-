@@ -4,9 +4,10 @@ import { ArrowRight, ChevronRight, ShieldCheck, Flame, Clock, Wrench } from 'luc
 import { Link } from 'react-router-dom';
 
 const bgImages = [
-  "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1533722285514-419b4e3395c1?auto=format&fit=crop&q=80&w=2000"
+  "https://i.ibb.co/3m2kJJnp/Chat-GPT-Image-12-de-ago-de-2026-19-35-51.png",
+  "https://i.ibb.co/DHVbfWW3/Chat-GPT-Image-12-de-ago-de-2026-19-31-20.png",
+  "https://i.ibb.co/BKKg3xP4/Chat-GPT-Image-12-de-ago-de-2026-19-29-35.png",
+  "https://i.ibb.co/fGtgjNkP/Chat-GPT-Image-12-de-ago-de-2026-19-28-11.png"
 ];
 
 export default function Hero() {
@@ -31,10 +32,10 @@ export default function Hero() {
             animate={{ opacity: 0.95, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-br from-pro-dark via-pro-red to-[#ff5252] opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-pro-dark via-pro-red to-[#ff5252] opacity-75"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
