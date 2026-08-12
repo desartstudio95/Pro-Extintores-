@@ -3,7 +3,7 @@ import { Send, MessageCircle, Phone } from 'lucide-react';
 
 export default function ServiceForm() {
   return (
-    <div className="mt-10 bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 relative overflow-hidden">
+    <div className="mt-6 bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-pro-red/5 rounded-full blur-[80px] -z-10"></div>
       
       <div className="grid lg:grid-cols-2 gap-12 items-start relative z-10">

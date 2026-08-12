@@ -16,9 +16,9 @@ export default function Clients() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 border-y border-gray-200">
+    <section className="py-8 bg-gray-50 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 inline-flex items-center gap-2">
             <span className="w-4 h-[1px] bg-pro-red"></span>
             Segurança não é apenas o que fazemos. É aquilo que comprovamos.

@@ -51,7 +51,7 @@ export default function Products() {
             <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex items-center gap-3">
               <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
             </h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
               Nossos <span className="text-[#0a192f]">Produtos</span>
             </h3>
           </div>
@@ -71,7 +71,7 @@ export default function Products() {
           </div>
         </div>
         
-        <div className="w-full h-[2px] bg-pro-red mb-10 md:mb-12"></div>
+        <div className="w-full h-[2px] bg-pro-red mb-6 md:mb-12"></div>
 
         <div 
           className="relative w-full pb-8"
@@ -89,9 +89,9 @@ export default function Products() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="shrink-0 snap-start w-[290px] sm:w-[340px] bg-white rounded-[32px] md:rounded-[36px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
+                className="shrink-0 snap-start w-[240px] sm:w-[280px] bg-white rounded-[32px] md:rounded-[36px] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
               >
-                <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-gray-50">
+                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-gray-50">
                   <img 
                     src={product.image} 
                     alt={product.name} 
@@ -112,10 +112,10 @@ export default function Products() {
                     {product.description}
                   </p>
                   
-                  <div className="mt-auto pt-2">
+                  <div className="mt-auto pt-2 flex justify-center">
                     <Link 
                       to={`/produtos/${product.id}`} 
-                      className="block w-full text-center bg-[#0a192f] hover:bg-[#142d55] text-white font-bold text-sm sm:text-base py-2.5 sm:py-3 rounded-[24px] transition-colors shadow-md"
+                      className="inline-block px-8 mx-auto text-center bg-[#0a192f] hover:bg-pro-red active:bg-red-700 active:scale-95 text-white font-bold text-sm sm:text-base py-2.5 sm:py-3 rounded-[24px] transition-all duration-300 shadow-md"
                     >
                       Ver Detalhes
                     </Link>

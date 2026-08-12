@@ -11,7 +11,7 @@ import Clients from '../components/Clients';
 
 export default function Home() {
   return (
-    <main className="flex-grow flex flex-col gap-6 md:gap-8 lg:gap-10 pb-8">
+    <main className="flex-grow flex flex-col gap-4 md:gap-6 lg:gap-8 pb-6">
       <div className="flex flex-col">
         <Hero />
         <BenefitBar />

@@ -10,7 +10,7 @@ export default function CatalogPage() {
   }, []);
 
   return (
-    <main className="flex-grow pt-24 pb-12 bg-gray-50 min-h-screen">
+    <main className="flex-grow pt-20 pb-8 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-pro-red font-semibold hover:underline mb-8">
           <ArrowLeft size={16} /> Voltar à página inicial
@@ -62,7 +62,7 @@ export default function CatalogPage() {
         </div>
 
         {/* Banner */}
-        <div className="mt-10 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="mt-6 bg-slate-50 border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h4 className="font-bold text-gray-900 text-xl">Não sabe qual equipamento precisa?</h4>
             <p className="text-slate-600 mt-2">Os nossos especialistas ajudam a escolher a solução certa para o seu caso.</p>

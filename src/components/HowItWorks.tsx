@@ -29,11 +29,11 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative z-10 scroll-mt-24 pt-4">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-6">
           <h2 className="text-xs font-bold text-pro-red tracking-widest uppercase mb-4 flex justify-center items-center gap-3">
             <span className="w-6 h-[1px] bg-pro-red"></span> Como Funciona <span className="w-6 h-[1px] bg-pro-red"></span>
           </h2>
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
             Processo simplificado e <br className="hidden sm:block"/> focado na sua <span className="text-slate-900">segurança.</span>
           </h3>
         </div>
