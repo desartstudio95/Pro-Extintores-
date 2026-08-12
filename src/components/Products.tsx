@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { productCategories as products } from '../data/products';
 
@@ -21,13 +21,13 @@ export default function Products() {
             // Reset to beginning
             current.scrollTo({ left: 0, behavior: 'smooth' });
           } else {
-            // Scroll right
-            current.scrollBy({ left: 200, behavior: 'smooth' });
+            // Scroll right by approximately one card width + gap
+            current.scrollBy({ left: 350, behavior: 'smooth' });
           }
         }
-      }, 3000); // Auto scroll every 3 seconds
+      }, 3500); // Auto scroll every 3.5 seconds
     }
-
+    
     return () => {
       if (intervalId) {
         clearInterval(intervalId);
@@ -38,12 +38,10 @@ export default function Products() {
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const { current } = scrollRef;
-      const scrollAmount = direction === 'left' ? -300 : 300;
+      const scrollAmount = direction === 'left' ? -350 : 350;
       current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-
-  
 
   return (
     <section id="products" className="relative z-10 scroll-mt-24 pt-4">
@@ -54,7 +52,7 @@ export default function Products() {
               <span className="w-6 h-[1px] bg-pro-red"></span> Equipamentos de Combate a Incêndios
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-gray-900 tracking-tight leading-[1.1]">
-              Nossos <span className="text-slate-900">Produtos</span>
+              Nossos <span className="text-[#0a192f]">Produtos</span>
             </h3>
           </div>
           <div className="flex items-center gap-3">
@@ -72,17 +70,17 @@ export default function Products() {
             </button>
           </div>
         </div>
-
-        <div className="w-full h-[2px] bg-pro-red mb-8"></div>
+        
+        <div className="w-full h-[2px] bg-pro-red mb-10 md:mb-12"></div>
 
         <div 
-          className="relative w-full pb-4"
+          className="relative w-full pb-8"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <div 
             ref={scrollRef}
-            className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4"
+            className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory pb-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
             {products.map((product, index) => (
               <motion.div
@@ -91,41 +89,47 @@ export default function Products() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
-                className="group relative rounded-xl overflow-hidden aspect-square bg-gray-50 border border-gray-200 shadow-md hover:shadow-xl hover:border-pro-red/50 transition-all duration-300 w-[200px] md:w-[240px] shrink-0 snap-start flex flex-col"
+                className="shrink-0 snap-start w-[290px] sm:w-[340px] bg-white rounded-[32px] md:rounded-[36px] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col group"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                />
-                
-                {/* Disponível Badge */}
-                <div className="absolute top-3 right-3 z-20">
-                  <div className="flex items-center gap-1 bg-pro-red/90 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg">
-                    <CheckCircle2 size={12} />
-                    <span>Disponível</span>
+                <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-gray-50">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 right-4 z-20">
+                    <div className="bg-pro-red text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-widest px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-md">
+                      Disponível
+                    </div>
                   </div>
                 </div>
-
-                <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 z-20 flex flex-col">
-                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight mb-2">{product.name}</h4>
-                  <p className="text-white/80 text-xs md:text-sm font-light mb-4 line-clamp-2">{product.description}</p>
+                
+                <div className="p-6 sm:p-8 flex flex-col flex-grow text-left">
+                  <h4 className="text-xl sm:text-[22px] font-black text-[#0a192f] mb-3 leading-tight">
+                    {product.name}
+                  </h4>
+                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 line-clamp-3">
+                    {product.description}
+                  </p>
                   
-                  <Link to={`/produtos/${product.id}`} className="inline-flex items-center gap-2 text-white font-semibold text-xs md:text-sm hover:text-pro-red transition-colors w-max group/btn">
-                    Ver produto
-                    <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mt-auto pt-2">
+                    <Link 
+                      to={`/produtos/${product.id}`} 
+                      className="block w-full text-center bg-[#0a192f] hover:bg-[#142d55] text-white font-bold text-sm sm:text-base py-2.5 sm:py-3 rounded-[24px] transition-colors shadow-md"
+                    >
+                      Ver Detalhes
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-        
-        <div className="mt-8 flex justify-center">
-          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-lg">
+
+        <div className="mt-4 flex justify-center">
+          <Link to="/catalogo" className="group inline-flex items-center gap-3 bg-[#0a192f] text-white px-6 py-3 rounded-full font-bold hover:bg-pro-red transition-colors shadow-md text-sm sm:text-base">
             Ver catálogo completo
-            <div className="w-6 h-6 rounded-full bg-white text-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="w-6 h-6 rounded-full bg-white text-[#0a192f] flex items-center justify-center group-hover:scale-110 transition-transform">
               <ArrowRight size={14} />
             </div>
           </Link>
